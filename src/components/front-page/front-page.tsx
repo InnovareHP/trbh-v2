@@ -7,9 +7,9 @@ const IntroductionPage = () => {
         <img
           src="/background/MBH_Homepage_Hero_2000x375.png"
           alt="Welcome"
-          className="w-full h-full object-cover"
+          className="w-full h-[150px] md:h-full object-cover"
         />
-        <div className="bg-gradient-to-tr from-cyan-600 to-cyan-300 h-4 w-full"></div>
+        <div className="h-4 w-full bg-gradient-to-r from-cyan-600 via-gray-300 to-cyan-600"></div>
       </div>
 
       <section className="bg-[#f3f3f3] w-full">
@@ -39,7 +39,7 @@ const IntroductionPage = () => {
             </p>
             <ButtonCTA
               text="LEARN MORE ABOUT THREE RIVERS BEHAVIORAL HEALTH"
-              href="/"
+              href="/our-focus/why-three-rivers-behavioral-health"
             />
           </div>
         </div>
@@ -76,12 +76,12 @@ const IntroductionPage = () => {
             <img
               src="/background/homepage_contact_400x280.jpg"
               alt="Doctor with patient"
-              className="w-[350px] md:w-[450px] h-[250px] md:h-[400px] object-cover "
+              className="w-full md:w-[450px] h-[200px] md:h-[400px] object-cover "
             />
           </div>
 
-          <div className="text-[#0097b2]">
-            <p className="text-4xl font-semibold mb-6 tracking-wide">
+          <div className="text-[#0097b2] px-2">
+            <p className="text-2xl md:text-4xl font-semibold mb-6 tracking-wide">
               Contact Us
             </p>
 
@@ -90,7 +90,10 @@ const IntroductionPage = () => {
             </p>
 
             <p className="text-[#0097b2] font-bold underline mb-4">
-              <a href="https://maps.google.com" target="_blank">
+              <a
+                href="https://www.google.com/maps/@38.3117107,-86.9643974,17z?hl=en&entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+              >
                 1880 Medical Arts Drive <br />
                 West Mifflin, PA 15122
               </a>

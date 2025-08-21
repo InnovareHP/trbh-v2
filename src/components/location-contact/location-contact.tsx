@@ -3,7 +3,7 @@ import Breadcrumb from "../sub-layout/sub-layout";
 const LocationContact = () => {
   return (
     <div className="min-h-fit">
-      <div className="bg-gradient-to-tr from-cyan-600 to-cyan-300 h-4 w-full"></div>
+      <div className="h-4 w-full bg-gradient-to-r from-cyan-600 via-gray-300 to-cyan-600"></div>
       <Breadcrumb pathname="/location-contact" title="Location & Contact" />
 
       <div className="max-w-7xl mx-auto px-6 py-10">

@@ -10,7 +10,7 @@ const OurFocus = () => {
           alt="Our Focus Banner"
           className="w-full h-full md:h-[350px] object-cover"
         />
-        <div className="bg-gradient-to-tr from-cyan-600 to-cyan-300 h-4 w-full"></div>
+        <div className="h-4 w-full bg-gradient-to-r from-cyan-600 via-gray-300 to-cyan-600"></div>
       </div>
 
       <Breadcrumb pathname="/our-focus" title="Our Focus" />

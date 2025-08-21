@@ -43,3 +43,39 @@ export const linksOurFocus = [
     href: "/our-focus/brochure",
   },
 ];
+
+export const defaultLinks = [
+  {
+    label: "Home",
+    href: "/",
+  },
+  {
+    label: "Our Focus",
+    href: "/our-focus",
+  },
+  {
+    label: "Patient & Visitor Guide",
+    href: "/patient-visitor-guide",
+  },
+  {
+    label: "About Three Rivers Behavioral Health",
+    href: "/about-us",
+  },
+  {
+    label: "Location / Contact",
+    href: "/location-contact",
+  },
+  {
+    label:
+      "Three Rivers Behavioral Health - Notice of Privacy Practices (HIPAA)",
+    href: "/notice-of-private-practice",
+  },
+  {
+    label: "Price Transparency",
+    href: "/price-transparency",
+  },
+  {
+    label: "Notice of Nondiscrimination",
+    href: "/notice-of-nondiscrimination",
+  },
+];
