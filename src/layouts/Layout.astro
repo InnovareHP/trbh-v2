@@ -1,22 +1,26 @@
+---
+import Footer from "../components/footer";
+import NavBar from "../components/nav-bar";
+import "../styles/global.css";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Three Rivers Behavioral Health</title>
 	</head>
 	<body>
+		<NavBar />
 		<slot />
+		<Footer client:only/>
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
