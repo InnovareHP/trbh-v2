@@ -17,7 +17,7 @@ const GuidePage = ({ title, pathname }: GuidePageProps) => {
   const components: Record<string, React.ComponentType> = {
     "preparing-for-your-stay": PreparingForYourStay,
     "during-your-stay": DuringYourStay,
-    "discharge-follow-up": DischargeFollowUp,
+    "discharge-and-follow-up": DischargeFollowUp,
     "getting-help-at-home": GettingHelpAtHome,
     "discharge-to-a-facility": DischargeToAFacility,
     visitation: Visitation,

@@ -10,7 +10,7 @@ export default function PreparingForYourStay() {
 
           {/* Image floated so text wraps */}
           <img
-            src="/image/preparing_for_stay_400x280.jpg"
+            src="/image/preparing-for-stay.jpg"
             alt="Elderly couple smiling"
             className="w-92 h-auto object-cover md:float-right mr-6 mb-4 md:mx-4"
           />
@@ -20,19 +20,19 @@ export default function PreparingForYourStay() {
           </h2>
 
           <p className="text-gray-700">
-            You will only need casual clothing during your hospital stay. Please
-            bring no more than three changes of clothing, as laundry services
-            are available. We encourage you to wear your own comfortable attire.
-            Consider a sweater if you tend to feel cold. Your days will be
-            active, so avoid bringing expensive clothing or jewelry as it is
-            prohibited and we cannot accept responsibility for loss or damage.
+            You will only need casual clothing during your residential stay.
+            Please bring no more than five changes of clothing, as laundry
+            services are available. We encourage you to wear your own
+            comfortable attire. Consider a sweater if you tend to feel cold.
+            Your days will be active, so avoid bringing expensive clothing or
+            jewelry as it is prohibited and we cannot accept responsibility for
+            loss or damage.
           </p>
 
           <p className="text-gray-700">
             Upon admission, our staff will inventory your personal belongings,
             including any items brought throughout the duration of your stay.
-            Please consult the Contraband List in your patient handbook for
-            guidance.
+            Please consult the Contraband List in your handbook for guidance.
           </p>
 
           <div>
@@ -47,7 +47,6 @@ export default function PreparingForYourStay() {
             </ul>
           </div>
 
-          {/* Clear float so footer doesn’t overlap */}
           <div className="clear-both"></div>
         </div>
       </div>

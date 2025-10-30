@@ -8,7 +8,7 @@ const ReferralProcess = () => {
           src="/background/referral_process_2000x375.jpg"
           alt="Referral Process Banner"
           loading="lazy"
-          className="w-full h-[350px] object-cover"
+          className="w-full h-[150px] md:h-[350px] object-cover"
         />
         <div className="h-4 w-full bg-gradient-to-r from-cyan-600 via-gray-300 to-cyan-600"></div>
       </div>
@@ -26,15 +26,19 @@ const ReferralProcess = () => {
               Information Gathering
             </p>
             <p className="text-gray-700 leading-relaxed">
-              Prior to a potential admission, our clinical team will gather
-              relevant and pertinent information related to you or your loved
-              one&apos;s psychiatric symptoms as well as gather a complete
-              health status to ensure we are prepared to care for your loved
-              one. This process also involves reviewing relevant records. This
-              thorough data collection ensures that the Three River Behavioral
-              Health&apos;s multidisciplinary treatment team receives the most
-              up-to-date information on the patient&apos;s symptoms in order to
-              initiate treatment from the outset.
+              Prior to a potential admission to one of our three levels of care,
+              our clinical team will gather relevant and pertinent information
+              related to you or your loved one's psychiatric symptoms as well as
+              gather a complete health status to ensure we are prepared to care
+              for your loved one. This process also involves reviewing relevant
+              records. This thorough data collection ensures that the Three
+              River Behavioral Health’s multidisciplinary treatment team
+              receives the most up-to-date information on the patient’s symptoms
+              in order to initiate treatment from the outset
+            </p>
+
+            <p>
+              Please call our <strong>Intake Line at 1-888-391-2655.</strong>
             </p>
           </div>
 
@@ -59,9 +63,8 @@ const ReferralProcess = () => {
             <p className="text-gray-700 leading-relaxed">
               Our specially trained staff will be waiting for your arrival, from
               there we will conduct an Intake Assessment as well as a Nursing
-              Assessment. You will be given a tour and shown to your room where
-              we will make sure all your clothing is labeled and put away for
-              you.
+              Assessment. You will be given a tour of the facility and receive
+              relevant information to start your treatment program successfully.
             </p>
           </div>
         </div>

@@ -16,12 +16,12 @@ const PriceTransparency = () => {
         <p className="mb-4">
           We support price transparency for the patients and families we serve.
           Click on a link below to view our standard pricing and shoppable
-          services pricing. You may contact{" "}
+          services pricing. You may contact
           <a
-            href="tel:9307772005"
+            href="tel:4127069201"
             className="font-semibold text-primary hover:underline"
           >
-            (930) 777-2005
+            412-706-9201
           </a>{" "}
           with questions regarding your bill.
         </p>
@@ -29,12 +29,18 @@ const PriceTransparency = () => {
         {/* Links */}
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <a href="#" className="font-semibold text-cyan-700 hover:underline">
+            <a
+              href="/Three-Behavioral-Health-West Mifflin-2025-Shoppable-Services-Pricing.xlsx"
+              className="font-semibold text-cyan-700 hover:underline"
+            >
               VIEW STANDARD PRICING
             </a>
           </li>
           <li>
-            <a href="#" className="font-semibold text-cyan-700 hover:underline">
+            <a
+              href="/Three-Behavioral-Health-West Mifflin-2025-Standard-Pricing.xlsx"
+              className="font-semibold text-cyan-700 hover:underline"
+            >
               VIEW SHOPPABLE SERVICES PRICING
             </a>
           </li>

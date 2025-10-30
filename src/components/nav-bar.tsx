@@ -1,13 +1,64 @@
-import { Menu } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSub, setActiveSub] = useState<string | null>(null);
 
   const navLinks = [
-    { name: "Our Focus", href: "/our-focus" },
-    { name: "Residential Treatment", href: "/residential-treatment" },
-    { name: "Patient & Visitor Guide", href: "/patient-visitor-guide" },
+    {
+      name: "Our Focus",
+      href: "/our-focus",
+    },
+    {
+      name: "Psychiatric Inpatient Treatment Program",
+      href: "/our-focus/psychiatric-inpatient-treatment-program",
+      subLinks: [
+        {
+          name: "Conditions and Therapy Program",
+          href: "/patient-visitor-guide",
+        },
+        { name: "Nutrition Program", href: "/our-focus/nutrition-program" },
+        {
+          name: "Preparing for Your Psychiatric Inpatient Stay",
+          href: "/patient-visitor-guide/preparing-for-your-stay",
+        },
+        {
+          name: "During Your Psychiatric Inpatient Stay",
+          href: "/patient-visitor-guide/during-your-stay",
+        },
+        {
+          name: "Psychiatric Inpatient Discharge and Follow-up",
+          href: "/patient-visitor-guide/discharge-and-follow-up",
+        },
+        {
+          name: "Getting Help at Home After Psychiatric Inpatient",
+          href: "/patient-visitor-guide/getting-help-at-home",
+        },
+        {
+          name: "Discharge to a Facility After Psychiatric Inpatient",
+          href: "/patient-visitor-guide/discharge-to-a-facility",
+        },
+      ],
+    },
+    {
+      name: "Residential Treatment Program",
+      href: "/residential-treatment",
+      subLinks: [
+        {
+          name: "Preparing for Your Residential Stay",
+          href: "/patient-visitor-guide/preparing-for-your-stay",
+        },
+        {
+          name: "During Your Residential Stay",
+          href: "/patient-visitor-guide/during-your-stay",
+        },
+      ],
+    },
+    {
+      name: "Intensive Outpatient Program",
+      href: "/inpatient-guide",
+    },
     { name: "Referral Process", href: "/referral-process" },
     { name: "Location & Contact", href: "/location-contact" },
   ];
@@ -27,26 +78,44 @@ const NavBar = () => {
       </div>
 
       {/* Main Nav */}
-      <div className="flex flex-wrap md:flex-nowrap items-center justify-between py-6 w-full max-w-7xl mx-auto px-4 bg-white z-50">
+      <div className="flex flex-wrap md:flex-nowrap items-center justify-between py-6 w-full max-w-7xl mx-auto px-4 bg-white z-50 relative">
         {/* Logo */}
         <a href="/" className="flex items-center">
           <img
             src="/logo/trbh-logo.png"
             alt="Logo"
-            className="h-20 w-auto object-contain"
+            className="h-20 md:h-40 w-auto object-contain"
           />
         </a>
 
         {/* Desktop Nav */}
-        <ul className="hidden sm:flex space-x-8 justify-center items-center">
+        <ul className="hidden md:flex space-x-8 items-center relative">
           {navLinks.map((link) => (
-            <li key={link.name}>
+            <li key={link.name} className="group relative">
               <a
                 href={link.href}
-                className="text-blue-900 hover:text-cyan-600 transition text-md font-semibold"
+                className="text-blue-900 hover:text-cyan-600 transition text-md font-semibold flex items-center"
               >
                 {link.name}
+                {link.subLinks && (
+                  <ChevronDown className="ml-1 w-4 h-4 text-blue-900 group-hover:text-cyan-600 transition" />
+                )}
               </a>
+
+              {link.subLinks && (
+                <ul className="absolute top-full left-0 mt-2 w-72 bg-white shadow-lg rounded border border-gray-100 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200">
+                  {link.subLinks.map((sub) => (
+                    <li key={sub.name}>
+                      <a
+                        href={sub.href}
+                        className="block px-4 py-2 text-blue-900 hover:bg-cyan-50 hover:text-cyan-700 text-sm font-medium"
+                      >
+                        {sub.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
           ))}
         </ul>
@@ -54,49 +123,68 @@ const NavBar = () => {
         {/* Burger Button (Mobile) */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="sm:hidden text-black focus:outline-none"
+          className="md:hidden text-black focus:outline-none z-50 absolute right-4 top-4"
         >
-          <Menu size={28} />
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
       {/* Mobile Drawer */}
       <div
-        className={` ${
-          isOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
+        className={`fixed top-0 right-0 z-40 pt-42 w-full h-full bg-neutral-900/95 p-6 overflow-y-auto transform transition-transform duration-300 ${
+          isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div
-          className={`fixed top-30 right-0 h-full w-full bg-neutral-900 shadow-lg z-50 p-6 flex flex-col space-y-6 transform transition-transform duration-300 ${
-            isOpen ? "translate-x-0" : "translate-x-full"
-          } ${!isOpen ? "pointer-events-none" : ""}`}
-          onClick={(e) => e.stopPropagation()}
-        >
-          <ul className="flex flex-col space-y-6">
-            {navLinks.map((link) => (
-              <li key={link.name}>
-                <a
-                  href={link.href}
-                  className="block text-white transition font-semibold"
-                  onClick={() => setIsOpen(false)}
-                >
+        <ul className="flex flex-col space-y-6">
+          {navLinks.map((link) => (
+            <li key={link.name}>
+              <div
+                className="flex justify-between items-center text-white font-semibold cursor-pointer"
+                onClick={() =>
+                  setActiveSub(activeSub === link.name ? null : link.name)
+                }
+              >
+                <a href={link.href} onClick={() => setIsOpen(false)}>
                   {link.name}
                 </a>
-              </li>
-            ))}
-            <li>
-              <a
-                href="/about-us"
-                className="block text-white transition font-semibold"
-                onClick={() => setIsOpen(false)}
-              >
-                About Us
-              </a>
+                {link.subLinks && (
+                  <ChevronDown
+                    className={`ml-2 transform transition-transform ${
+                      activeSub === link.name ? "rotate-180" : ""
+                    }`}
+                  />
+                )}
+              </div>
+
+              {/* Mobile Submenu */}
+              {activeSub === link.name && link.subLinks && (
+                <ul className="mt-2 ml-4 space-y-2">
+                  {link.subLinks.map((sub) => (
+                    <li key={sub.name}>
+                      <a
+                        href={sub.href}
+                        className="block text-gray-300 text-sm"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {sub.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
-          </ul>
-        </div>
+          ))}
+
+          <li>
+            <a
+              href="/about-us"
+              className="block text-white font-semibold"
+              onClick={() => setIsOpen(false)}
+            >
+              About Us
+            </a>
+          </li>
+        </ul>
       </div>
     </nav>
   );

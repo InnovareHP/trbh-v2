@@ -32,7 +32,7 @@ const Footer = () => {
 
         {/* Sections */}
         <div
-          className="flex flex-col items-center justify-center text-center gap-12 
+          className="flex flex-col items-center justify-center text-center gap-12
                         lg:flex-row lg:justify-evenly lg:items-start lg:text-left"
         >
           {/* Address */}
@@ -41,7 +41,7 @@ const Footer = () => {
             target="_blank"
             className="space-y-4"
           >
-            <h2>THREE RIVERS BEHAVIORAL HEALTH</h2>
+            <h2 className="font-bold">THREE RIVERS BEHAVIORAL HEALTH</h2>
             <h3 className="mt-3 text-sm leading-6">
               4043 Irene St
               <br />

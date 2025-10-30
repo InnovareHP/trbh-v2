@@ -6,21 +6,23 @@ const DuringYourStay = () => {
       </h1>
 
       <img
-        src="/image/during_your_stay_400x280.jpg"
+        src="/image/during-your-stay.webp"
         alt="Patient and nurse during orientation"
         className="w-full md:w-96 h-auto object-cover md:float-right md:ml-6 mb-4"
       />
       <div className="gap-6 items-start">
         <div className="md:col-span-5 space-y-4 text-sm">
-          <h2 className="text-xl font-semibold text-[#0097b2]">Orientation</h2>
+          <h2 className="text-xl font-semibold text-[#0097b2]">
+            Psychiatric Inpatient Orientation
+          </h2>
           <p>
-            At Three Rivers Behavioral Health, we value each individual and are
-            committed to understanding your story and helping you achieve
-            wellness. We understand that being admitted to a hospital can be
-            daunting and scary. Our staff empathize with this and strive to
-            ensure you feel comfortable throughout your stay. For safety
-            reasons, our doors remain locked, particularly to safeguard patients
-            experiencing confusion or wandering tendencies.
+            At Three Rivers Behavioral Health Psychiatric Inpatient Program, we
+            value each individual and are committed to understanding your story
+            and helping you achieve wellness. We understand that being admitted
+            to a hospital can be daunting and scary. Our staff empathize with
+            this and strive to ensure you feel comfortable throughout your stay.
+            For safety reasons, our doors remain locked, particularly to
+            safeguard patients experiencing confusion or wandering tendencies.
           </p>
           <p>
             Our unit specializes in providing acute psychiatric care for adults
@@ -31,13 +33,6 @@ const DuringYourStay = () => {
           </p>
         </div>
       </div>
-
-      <p>
-        social workers, therapists and recreational therapists. Upon arrival, we
-        will introduce you to our friendly and experienced staff, who are eager
-        to assist you with the challenges that led to hospitalization. Our rooms
-        are semi-private, and you may have a roommate.
-      </p>
 
       <p>
         We operate under the belief that aging does not prohibit learning and
@@ -70,7 +65,7 @@ const DuringYourStay = () => {
 
       {/* Visitation Hours */}
       <p className="text-lg font-semibold text-[#0097b2] mt-4">
-        Visitation Hours:
+        Inpatient Visitation Hours:
       </p>
 
       <p className="font-bold">Tuesday and Thursday: 2:00 PM – 4:00 PM</p>
@@ -88,7 +83,7 @@ const DuringYourStay = () => {
       <div className="space-y-6 text-sm leading-relaxed">
         <section>
           <p className="text-lg font-semibold text-[#0097b2] mb-2">
-            Visitation Procedure:
+            Inpatient Visitation Procedure:
           </p>
 
           <div className="space-y-3">
@@ -149,6 +144,13 @@ const DuringYourStay = () => {
             hours. Calls from your guardian, POA, attorney or clergy are allowed
             at any time. Please note that staff may request you to conclude your
             call if it is deemed inappropriate.
+          </p>
+          <p>
+            Scheduled video conference calls with significant others may also be
+            arranged, when appropriate, in coordination with clinical staff.
+            This option can be especially helpful for older adults who may
+            benefit from visual connection, or for patients wishing to connect
+            with loved ones under the age of 18.
           </p>
         </section>
 

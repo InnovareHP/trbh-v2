@@ -1,0 +1,17 @@
+---
+import GuidePage from "../../components/inpatient-guide/inpatient-guide.tsx";
+import Layout from "../../layouts/Layout.astro";
+
+export function getStaticPaths() {
+  return [
+    { params: { guide: "preparing-for-your-stay" } },
+    { params: { guide: "during-your-stay" } },
+  ];
+}
+
+const { guide } = Astro.params;
+---
+
+<Layout>
+  <GuidePage title={guide} pathname={`/patient & visitor guide/${guide}`} />
+</Layout>

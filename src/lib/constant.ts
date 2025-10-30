@@ -8,8 +8,8 @@ export const linksPatientVisitorGuide = [
     href: "/patient-visitor-guide/during-your-stay",
   },
   {
-    label: "Discharge & Follow-up",
-    href: "/patient-visitor-guide/discharge-follow-up",
+    label: "Psychiatric Inpatient Discharge & Follow-up",
+    href: "/patient-visitor-guide/discharge-and-follow-up",
   },
   {
     label: "Getting Help at Home",
@@ -19,16 +19,23 @@ export const linksPatientVisitorGuide = [
     label: "Discharge to a Facility",
     href: "/patient-visitor-guide/discharge-to-a-facility",
   },
+];
+
+export const linksInPatientVisitorGuide = [
   {
-    label: "Visitation",
-    href: "/patient-visitor-guide/visitation",
+    label: "Preparing for Your Stay",
+    href: "/inpatient-guide/preparing-for-your-stay",
+  },
+  {
+    label: "During Your Stay",
+    href: "/inpatient-guide/during-your-stay",
   },
 ];
 
 export const linksOurFocus = [
   {
-    label: "Why Three Rivers Behavioral Health?",
-    href: "/our-focus/why-three-rivers-behavioral-health",
+    label: "Psychiatric Inpatient Treatment Program",
+    href: "/our-focus/psychiatric-inpatient-treatment-program",
   },
   {
     label: "Conditions & Therapy Programs",

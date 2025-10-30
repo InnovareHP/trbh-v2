@@ -23,8 +23,8 @@ const OurFocus = () => {
             <div className="flex-1">
               <p className="text-gray-700 leading-relaxed mb-4">
                 Three Rivers Behavioral Health/Three Rivers Residential Health
-                is committed to providing quality, patient-focused care to
-                individuals with primary psychiatric diagnoses.
+                (TRBH/TRRH) is committed to providing quality, patient-focused
+                care to individuals with primary psychiatric diagnoses.
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -50,10 +50,14 @@ const OurFocus = () => {
                 <li>Schizophrenia</li>
                 <li>Behavior disturbances</li>
                 <li>Depression</li>
-                <li>Alzheimer’s disease and other forms of dementia</li>
                 <li>
-                  Mental disorders resulting from brain injury, stroke, or other
-                  neuropsychiatric conditions
+                  Secondary diagnoses including Alzheimer’s disease, dementia,
+                  and mental disorders resulting from brain injury, stroke, or
+                  other neuropsychiatric conditions
+                </li>
+                <li>
+                  Post traumatic Stress Disorder, Acute Stress Disorder, and
+                  Adjustment Disorders
                 </li>
               </ul>
             </div>

@@ -5,9 +5,9 @@ const IntroductionPage = () => {
     <div className="min-h-screen h-full">
       <div className="flex flex-col items-center justify-center mb-16">
         <img
-          src="/background/MBH_Homepage_Hero_2000x375.png"
+          src="/background/care-home-banner.webp"
           alt="Welcome"
-          className="w-full h-[150px] md:h-full object-cover"
+          className="w-full h-[150px] md:h-[350px] object-cover"
         />
         <div className="h-4 w-full bg-gradient-to-r from-cyan-600 via-gray-300 to-cyan-600"></div>
       </div>
@@ -16,7 +16,7 @@ const IntroductionPage = () => {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div>
             <img
-              src="/background/OurMission_400x280.jpg"
+              src="/image/ourMission.jpeg"
               alt="Doctor with patient"
               className="w-[350px] md:w-[450px] h-[250px] md:h-[400px] object-cover "
             />
@@ -39,7 +39,7 @@ const IntroductionPage = () => {
             </p>
             <ButtonCTA
               text="LEARN MORE ABOUT THREE RIVERS BEHAVIORAL HEALTH"
-              href="/our-focus/why-three-rivers-behavioral-health"
+              href="/about-us"
             />
           </div>
         </div>
@@ -49,7 +49,7 @@ const IntroductionPage = () => {
         <div className=" max-w-7xl mx-auto flex flex-col md:flex-row-reverse items-center gap-10">
           <div className="">
             <img
-              src="/background/Our_Vision_HCProviders_400x280.jpg"
+              src="/image/our-vision.jpg"
               alt="Doctor with patient"
               className="w-[350px] md:w-[450px] h-[250px] md:h-[400px] object-cover "
             />
@@ -65,7 +65,10 @@ const IntroductionPage = () => {
               differentiated by discovery, innovation, compassionate, and
               excellent patient and family-centered care.
             </p>
-            <ButtonCTA text="WHY THREE RIVERS BEHAVIORAL HEALTH?" href="/" />
+            <ButtonCTA
+              text="WHY THREE RIVERS BEHAVIORAL HEALTH?"
+              href="/our-focus/psychiatric-inpatient-treatment-program"
+            />
           </div>
         </div>
       </section>
@@ -74,7 +77,7 @@ const IntroductionPage = () => {
         <div className="max-w-xs md:max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="">
             <img
-              src="/background/homepage_contact_400x280.jpg"
+              src="/image/contact-us.jpg"
               alt="Doctor with patient"
               className="w-full md:w-[450px] h-[200px] md:h-[400px] object-cover "
             />
@@ -91,11 +94,13 @@ const IntroductionPage = () => {
 
             <p className="text-[#0097b2] font-bold underline mb-4">
               <a
-                href="https://www.google.com/maps/@38.3117107,-86.9643974,17z?hl=en&entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D"
+                href="https://www.google.com/maps/place/Three+Rivers+Behavioral+Health/@40.389874,-79.8779095,17z/data=!3m1!4b1!4m6!3m5!1s0x8834ef507fa8d655:0x63ad62d7af0e6219!8m2!3d40.389874!4d-79.8779095!16s%2Fg%2F11x0_20gs3?hl=en&entry=ttu&g_ep=EgoyMDI1MDMwMy4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
               >
-                1880 Medical Arts Drive <br />
+                4043 Irene St
+                <br />
                 West Mifflin, PA 15122
+                <br />
               </a>
             </p>
 

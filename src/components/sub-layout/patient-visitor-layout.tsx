@@ -12,9 +12,21 @@ const PatientVisitorLayout = ({
   title: string;
   pathname: string;
 }) => {
+  console.log(pathname);
   return (
     <div className="min-h-fit">
-      <div className="bg-gradient-to-tr from-cyan-600 to-cyan-300 h-4 w-full"></div>
+      {title === "preparing-for-your-stay" ? (
+        <div className="flex flex-col items-center justify-center mb-8">
+          <img
+            src="/background/referral-process.jpg"
+            alt="Our Focus Banner"
+            className="w-full h-[150px] md:h-[350px] object-cover"
+          />
+          <div className="h-4 w-full bg-gradient-to-r from-cyan-600 via-gray-300 to-cyan-600"></div>
+        </div>
+      ) : (
+        <div className="bg-gradient-to-tr from-cyan-600 to-cyan-300 h-4 w-full"></div>
+      )}
 
       <Breadcrumb pathname={pathname} title={title} />
 
@@ -22,21 +34,24 @@ const PatientVisitorLayout = ({
         <div className="lg:col-span-2">
           <div className="flex gap-10">
             {children}
-            <aside className="space-y-4 hidden md:block">
-              {linksPatientVisitorGuide.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="border-t border-cyan-500 pt-2 w-full flex justify-center"
-                >
-                  <a
-                    href={item.href}
-                    className="text-base font-bold text-primary w-60 text-start px-4 cursor-pointer"
+            {pathname !== "/patient & visitor guide/preparing-for-your-stay" &&
+            pathname !== "/patient & visitor guide/during-your-stay" ? (
+              <aside className="space-y-4 hidden md:block">
+                {linksPatientVisitorGuide.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="border-t border-cyan-500 pt-2 w-full flex justify-center"
                   >
-                    {item.label}
-                  </a>
-                </div>
-              ))}
-            </aside>
+                    <a
+                      href={item.href}
+                      className="text-base font-bold text-primary w-60 text-start px-4 cursor-pointer"
+                    >
+                      {item.label}
+                    </a>
+                  </div>
+                ))}
+              </aside>
+            ) : null}
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ const DischargeFollowUp = () => {
       {/* Content */}
       <div className="flex-1 space-y-2 text-sm leading-relaxed">
         <h2 className="text-3xl font-bold text-primary">
-          Discharge &amp; Follow-up
+          Psychiatric Inpatient Discharge & Follow-up
         </h2>
 
         <h3 className="text-xl font-semibold text-primary mt-6">
@@ -13,18 +13,17 @@ const DischargeFollowUp = () => {
         <div className="relative">
           {/* Image floated to the right */}
           <img
-            src="/image/dischrage_and_followup_400x280.jpg"
+            src="/image/discharge-follow-up.jpg"
             alt="Nurse with patient during discharge planning"
             className="md:float-right md:ml-4 mb-4 w-full md:w-1/3 rounded"
           />
           <p>
             A hospital visit can be overwhelming and intimidating for patients
             and their families. As a caretaker, your primary focus is on your
-            family member’s medical care, and the hospital staff shares this
-            commitment. While it may not be top-of-mind now, it is important to
-            consider what happens after you or your relative is discharged.
-            Patients, family caretakers and healthcare providers all have roles
-            in ensuring the patient’s ongoing health post-discharge.
+            family member's medical care, and the hospital staff shares this
+            commitment. While the priority at admission is stabilization and
+            treatment, it is important to consider what happens after you or
+            your relative is discharged.
           </p>
         </div>
 
@@ -34,7 +33,7 @@ const DischargeFollowUp = () => {
         <p>
           According to Medicare, discharge planning is "a process used to
           determine what a patient needs for a smooth transition from one level
-          of care to another." While only a doctor can authorize a patient’s
+          of care to another." While only a doctor can authorize a patient's
           release from the hospital, discharge planning itself can be carried
           out by a social worker, case manager, nurse or another qualified
           individual. Especially for complex medical conditions, an ideal
