@@ -1,9 +1,3 @@
----
-import Footer from "../components/footer";
-import NavBar from "../components/nav-bar";
-import "../styles/global.css";
----
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,51 +11,62 @@ import "../styles/global.css";
     rel="stylesheet"
   />
 
-  <!-- Title & Description -->
   <title>Three Rivers Behavioral Health | Psychiatric Inpatient, Residential & Intensive Outpatient Programs</title>
-  <meta
-    name="description"
-    content="Three Rivers Behavioral Health offers compassionate and comprehensive psychiatric inpatient, residential treatment and intensive outpatient programs for adults with mental health and neuro-psychiatric diagnoses in West Mifflin, PA."
-  />
-
-  <!-- Keywords -->
-  <meta
-    name="keywords"
-    content="Three Rivers Behavioral Health, TRBH, psychiatric inpatient treatment, adult residential mental health services, intensive outpatient program IOP, older adult psychiatric care, anxiety treatment, depression treatment, trauma informed therapy, EMDR, DBT, schizophrenia treatment, West Mifflin psychiatric hospital, PA mental health facility, mental health hospital Pittsburgh area, neuropsychiatric disorders treatment, dual diagnosis care"
-  />
-
-  <!-- Open Graph / Social Media -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://trbhcares.com/" />
-  <meta property="og:title" content="Three Rivers Behavioral Health | Healing Minds & Changing Lives" />
-  <meta
-    property="og:description"
-    content="Providing patient-focused psychiatric care: inpatient hospitalization, residential services & intensive outpatient programs for adults at Three Rivers Behavioral Health."
-  />
-  <meta property="og:image" content="/background/care-home-banner.webp" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Three Rivers Behavioral Health | Adult Psychiatric Programs" />
-  <meta
-    name="twitter:description"
-    content="Explore Three Rivers Behavioral Health’s comprehensive programs for adults: inpatient, residential, and intensive outpatient psychiatric services."
-  />
-  <meta name="twitter:image" content="/background/care-home-banner.webp" />
-
-  <!-- Robots & Author -->
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="Three Rivers Behavioral Health" />
-
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://trbhcares.com/" />
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0097b2 0%, #007c91 100%);
+      color: #fff;
+    }
+    
+    .container {
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    
+    p {
+      font-size: 1.25rem;
+      font-weight: 300;
+      opacity: 0.95;
+      color: #fff;
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 
-	<body class="flex flex-col min-h-screen">
-		<NavBar client:load />
-		<main class="flex-grow">
-			<slot />
-		</main>
-		<Footer client:load/>
-	</body>
+<body>
+  <div class="container">
+    <h1>Under Construction</h1>
+    <p>We'll be back soon!</p>
+  </div>
+</body>
 </html>
