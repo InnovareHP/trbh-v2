@@ -5,6 +5,7 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSub, setActiveSub] = useState<string | null>(null);
 
+  // add data
   const navLinks = [
     {
       name: "Our Focus",
