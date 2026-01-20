@@ -59,7 +59,7 @@ const GettingHelpAtHome = () => {
         living, such as:
       </p>
 
-      <ul>
+      <ul className="list-disc list-inside space-y-1 pl-6 text-black"    >
         <li>Personal Care: Bathing, toileting, dressing, eating</li>
         <li>Household Tasks: Shopping, cooking, laundry, cleaning</li>
         <li>

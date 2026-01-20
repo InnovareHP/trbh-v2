@@ -17,7 +17,7 @@ const NavBar = () => {
       subLinks: [
         {
           name: "Conditions and Therapy Program",
-          href: "/patient-visitor-guide",
+          href: "/our-focus/conditions-and-therapy-programs",
         },
         { name: "Nutrition Program", href: "/our-focus/nutrition-program" },
         {

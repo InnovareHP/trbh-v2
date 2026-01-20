@@ -5,7 +5,7 @@ export default function PreparingForYourStay() {
         {/* Text Content with Wrapping */}
         <div className="space-y-6 text-sm">
           <p className="text-3xl font-bold text-[#0097b2] mb-4">
-            Preparing for Your Stay
+          Personal Items
           </p>
 
           {/* Image floated so text wraps */}
@@ -15,17 +15,9 @@ export default function PreparingForYourStay() {
             className="w-92 h-auto object-cover md:float-right mr-6 mb-4 md:mx-4"
           />
 
-          <h2 className="text-xl font-semibold text-[#0097b2]">
-            Personal Items
-          </h2>
 
           <p className="text-gray-700">
-            You will only need casual clothing during your residential stay.
-            Please bring no more than five changes of clothing, as laundry
-            services are available. We encourage you to wear your own
-            comfortable attire. Consider a sweater if you tend to feel cold.
-            Your days will be active, so avoid bringing expensive clothing or
-            jewelry as it is prohibited and we cannot accept responsibility for
+          You will only need casual clothing during your hospital stay. Please bring no more than three changes of clothing, as laundry services are available. We encourage you to wear your own comfortable attire. Consider a sweater if you tend to feel cold. Your days will be active, so avoid bringing expensive clothing or jewelry as it is prohibited and we cannot accept responsibility for loss or damagited and we cannot accept responsibility for
             loss or damage.
           </p>
 

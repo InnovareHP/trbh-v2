@@ -80,6 +80,19 @@ const DuringYourStay = () => {
         up-to-date information.
       </p>
 
+  
+      <h2 className="text-xl font-bold text-black">Visiting Holidays Include:</h2> 
+
+<ul className="list-disc list-inside pl-6 text-black"    >
+  <li className="font-bold" >New Year's Day</li>
+  <li className="font-bold">Memorial Day</li>
+  <li className="font-bold">Independence Day</li>
+  <li className="font-bold">Labor Day</li>
+  <li className="font-bold">Thanksgiving Day</li>
+  <li className="font-bold">Christmas Day</li>
+</ul>
+  
+
       <div className="space-y-6 text-sm leading-relaxed">
         <section>
           <p className="text-lg font-semibold text-[#0097b2] mb-2">
@@ -110,7 +123,7 @@ const DuringYourStay = () => {
               be respectful of others.
             </p>
             <p>
-              Mission Behavioral Health Hospital values the care partners of our
+              Three Rivers Behavioral Health values the care partners of our
               clients. Visitors are asked to arrive 15 minutes prior to the
               visitation to check in. We respect patient’s privacy, so we
               restrict visitation to those listed on the patient’s visitor/phone
@@ -196,7 +209,7 @@ const DuringYourStay = () => {
               allowed), and TV shows rated anything except TV-MA.
             </li>
             <li>
-              Mission Behavioral Health will provide the movies available for
+              Three Rivers Behavioral Health will provide the movies available for
               patient viewing.
             </li>
             <li>
