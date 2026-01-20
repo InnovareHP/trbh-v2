@@ -16,10 +16,7 @@ const IntensiveOutpatient = () => {
 
           <p>
             Three Rivers Behavioral Health Intensive Outpatient Program (IOP) is
-            provided for adults, ages 18 and older. The goals of our IOP are to
-            stabilize symptoms through bottom-up trauma informed interventions,
-            build skills while engaging in a wise mind, develop a positive
-            support system, and promote client autonomy. TRBH IOP is dedicated
+            provided for adults, ages 18 and older. The goals of our IOP are to stabilize symptoms through regulation of the nervous system using trauma informed interventions, build skills while engaging in a wise mind, develop a positive support system, and promote client autonomy. TRBH IOP is dedicated
             to being a trusted psychiatric treatment program that provides
             intensive outpatient treatment to clients with acute psychiatric
             diagnoses that do not require inpatient hospitalization or
@@ -28,11 +25,7 @@ const IntensiveOutpatient = () => {
           </p>
 
           <p>
-            Therapeutic services in TRBH IOP focus on healing the body and
-            nervous system to improve emotional and psychological well-being.
-            Clients are encouraged to apply newly learned coping skills,
-            emotional regulation techniques, psychoeducation, and mindfulness
-            strategies in their daily environments.
+          Therapeutic services provided in TRBH IOP focus on healing the body and nervous system to improve emotional and psychological well-being. The IOP encourages clients to use newly learned coping strategies, emotional regulation skills, psychoeducation, and mindfulness in their own living environments throughout treatment.
           </p>
 
           <h3 className="text-xl font-semibold text-primary mt-6">
