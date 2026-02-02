@@ -17,7 +17,12 @@ export default function PreparingForYourStay() {
 
 
           <p className="text-gray-700">
-          You will only need casual clothing during your hospital stay. Please bring no more than three changes of clothing, as laundry services are available. We encourage you to wear your own comfortable attire. Consider a sweater if you tend to feel cold. Your days will be active, so avoid bringing expensive clothing or jewelry as it is prohibited and we cannot accept responsibility for loss or damagited and we cannot accept responsibility for
+            You will only need casual clothing during your residential stay.
+            Please bring no more than five changes of clothing, as laundry
+            services are available. We encourage you to wear your own
+            comfortable attire. Consider a sweater if you tend to feel cold.
+            Your days will be active, so avoid bringing expensive clothing or
+            jewelry as it is prohibited and we cannot accept responsibility for
             loss or damage.
           </p>
 
