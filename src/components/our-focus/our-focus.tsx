@@ -1,26 +1,35 @@
 import { linksOurFocus } from "../../lib/constant";
+import ButtonCTA from "../button";
 import Breadcrumb from "../sub-layout/sub-layout";
 
 const OurFocus = () => {
   return (
     <div className="min-h-screen h-full">
-      <div className="flex flex-col items-center justify-center mb-8">
+      <header className="flex flex-col items-center justify-center mb-8">
         <img
           src="/background/Our_Focus_Banner.jpg"
-          alt="Our Focus Banner"
+          alt="Three Rivers Behavioral Health programs and services"
+          width="1200"
+          height="350"
+          fetchPriority="high"
           className="w-full h-full md:h-[350px] object-cover"
         />
         <div className="h-4 w-full bg-gradient-to-r from-cyan-600 via-gray-300 to-cyan-600"></div>
-      </div>
+      </header>
 
       <Breadcrumb pathname="/our-focus" title="Our Focus" />
 
-      <div className="max-w-7xl mx-auto px-6 py-10">
+      <main className="max-w-7xl mx-auto px-6 py-10">
         <div className="lg:col-span-2">
-          <p className="text-4xl font-bold text-[#0097b2] mb-6">Our Focus</p>
+          <h1
+            id="our-focus-heading"
+            className="text-4xl font-bold text-[#0097b2] mb-6"
+          >
+            Our Focus
+          </h1>
 
           <div className="flex gap-10">
-            <div className="flex-1">
+            <div className="flex-1" aria-labelledby="our-focus-heading">
               <p className="text-gray-700 leading-relaxed mb-4">
                 Three Rivers Behavioral Health/Three Rivers Residential Health
                 (TRBH/TRRH) is committed to providing quality, patient-focused
@@ -51,7 +60,7 @@ const OurFocus = () => {
                 <li>Behavior disturbances</li>
                 <li>Depression</li>
                 <li>
-                  Secondary diagnoses including Alzheimer’s disease, dementia,
+                  Secondary diagnoses including Alzheimer's disease, dementia,
                   and mental disorders resulting from brain injury, stroke, or
                   other neuropsychiatric conditions
                 </li>
@@ -62,22 +71,31 @@ const OurFocus = () => {
               </ul>
             </div>
             <aside className="space-y-4 hidden md:block">
-              {linksOurFocus.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="border-t border-cyan-500 pt-2 w-full flex justify-start"
-                >
-                  <a
-                    href={item.href}
-                    className="text-md font-bold text-[#0097b2] w-2xs px-10 hover:underline cursor-pointer"
+              <nav aria-label="Program Navigation">
+                {linksOurFocus.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="border-t border-cyan-500 pt-2 w-full flex justify-start"
                   >
-                    {item.label}
-                  </a>
-                </div>
-              ))}
+                    <a
+                      href={item.href}
+                      className="text-md font-bold text-[#0097b2] w-2xs px-10 hover:underline cursor-pointer"
+                    >
+                      {item.label}
+                    </a>
+                  </div>
+                ))}
+              </nav>
             </aside>
           </div>
         </div>
+      </main>
+
+      <div className="max-w-7xl mx-auto px-6 pb-6 text-center">
+        <p className="text-xl text-gray-700 mb-4">
+          Need help choosing the right program? Our team is available 24/7.
+        </p>
+        <ButtonCTA text="CALL NOW: 1-888-391-0229" href="tel:18883910229" />
       </div>
 
       <div className="max-w-4xl mx-auto px-6 pb-10 grid grid-cols-1 md:grid-cols-2 gap-4">

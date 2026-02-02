@@ -1,28 +1,21 @@
+import ButtonCTA from "../button";
 import Breadcrumb from "../sub-layout/sub-layout";
 
 export default function AboutUs() {
   return (
     <div className="min-h-screen h-full">
-      <div className="h-4 w-full bg-gradient-to-r from-cyan-600 via-gray-300 to-cyan-600"></div>
-      <Breadcrumb pathname="/about-us" title="About Us" />
+      <header>
+        <div className="h-4 w-full bg-gradient-to-r from-cyan-600 via-gray-300 to-cyan-600"></div>
+        <Breadcrumb pathname="/about-us" title="About Us" />
+      </header>
 
-      <div className="max-w-7xl mx-auto py-12 text-sm leading-relaxed space-y-4 px-6">
-        {/* Page Title */}
+      <main className="max-w-7xl mx-auto py-12 text-sm leading-relaxed space-y-4 px-6">
         <h1 className="text-3xl font-bold text-primary">About Us</h1>
 
-        {/* Intro */}
-        <section>
-          <h2 className="text-xl font-semibold text-primary">
-            Behavioral Health Care for Seniors
+        <section className="space-y-2" aria-labelledby="who-we-are-heading">
+          <h2 id="who-we-are-heading" className="text-xl font-semibold text-primary">
+            Who We Are
           </h2>
-          <p className="mt-2">
-            Personalized Mental Health Services Tailored to Your Needs.
-          </p>
-        </section>
-
-        {/* Who We Are */}
-        <section className="space-y-2">
-          <h2 className="text-xl font-semibold text-primary">Who We Are</h2>
 
           <h3 className="font-semibold">
             Three Rivers Behavioral Health Inpatient
@@ -43,16 +36,15 @@ export default function AboutUs() {
           </p>
           <p>
             Understanding that environment plays a significant role in a
-            patient’s progress, our inpatient hospital is specifically designed
+            patient's progress, our inpatient hospital is specifically designed
             to provide a safe, comfortable atmosphere for effective treatment.
             Each patient receives an individualized plan of care developed with
             the full participation of our multidisciplinary team.
           </p>
         </section>
 
-        {/* Mental Health Focus */}
-        <section className="space-y-4">
-          <h2 className="text-xl font-semibold text-primary">
+        <section className="space-y-4" aria-labelledby="mental-health-focus-heading">
+          <h2 id="mental-health-focus-heading" className="text-xl font-semibold text-primary">
             Focusing on the Mental Health Needs of Seniors
           </h2>
           <p>
@@ -64,7 +56,7 @@ export default function AboutUs() {
             <li>Schizophrenia</li>
             <li>Behavior disturbances</li>
             <li>Depression</li>
-            <li>Alzheimer’s and other types of dementia</li>
+            <li>Alzheimer's and other types of dementia</li>
             <li>
               Mental disorders related to brain injury, stroke or other
               neuropsychiatric disorders
@@ -72,14 +64,13 @@ export default function AboutUs() {
           </ul>
         </section>
 
-        {/* Expert Multidisciplinary Team */}
-        <section className="space-y-2">
-          <h2 className="text-xl font-semibold text-primary">
+        <section className="space-y-2" aria-labelledby="team-heading">
+          <h2 id="team-heading" className="text-xl font-semibold text-primary">
             Expert Multidisciplinary Team
           </h2>
           <p>
             Our multidisciplinary treatment team works closely with patients and
-            families to set individual goals addressing each patient’s specific
+            families to set individual goals addressing each patient's specific
             needs. The team consists of:
           </p>
           <ul className="list-disc list-inside">
@@ -98,9 +89,8 @@ export default function AboutUs() {
           </ul>
         </section>
 
-        {/* Adult & Older Adults Care */}
-        <section className="space-y-2">
-          <h2 className="text-xl font-semibold text-primary">
+        <section className="space-y-2" aria-labelledby="care-focus-heading">
+          <h2 id="care-focus-heading" className="text-xl font-semibold text-primary">
             Three Rivers Behavioral Health Focuses on the Needs of Adults and
             Older Adults
           </h2>
@@ -125,25 +115,37 @@ export default function AboutUs() {
           </p>
         </section>
 
-        {/* Contact Info */}
-        <section className="space-y-2">
-          <h2 className="text-xl font-semibold text-primary">
+        <section className="space-y-2" aria-labelledby="contact-info-heading">
+          <h2 id="contact-info-heading" className="text-xl font-semibold text-primary">
             For More Information
           </h2>
-          <p>
-            If you have questions, please call us at{" "}
-            <a href="tel:4127069201" className="text-primary font-semibold">
-              412-706-9201
-            </a>{" "}
-            or toll-free at{" "}
-            <a href="tel:18883910229" className="text-primary font-semibold">
-              1-888-391-0229
-            </a>
-            .
-          </p>
-          <p>We’re here for all your behavioral health needs!</p>
+          <address className="not-italic">
+            <p>
+              If you have questions, please call us at{" "}
+              <a
+                href="tel:4127069201"
+                className="text-primary font-semibold"
+                aria-label="Call local number 412-706-9201"
+              >
+                412-706-9201
+              </a>{" "}
+              or toll-free at{" "}
+              <a
+                href="tel:18883910229"
+                className="text-primary font-semibold"
+                aria-label="Call toll-free 1-888-391-0229"
+              >
+                1-888-391-0229
+              </a>
+              .
+            </p>
+          </address>
+          <p>We're here for all your behavioral health needs!</p>
+          <div className="mt-4 flex gap-4">
+            <ButtonCTA text="CONTACT US" href="/#contact" />
+          </div>
         </section>
-      </div>
+      </main>
     </div>
   );
 }

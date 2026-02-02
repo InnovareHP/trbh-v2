@@ -1,8 +1,22 @@
 ---
 import Hippa from "../components/notice-of-nondiscrimination/notice-of-nondiscrimination.tsx";
 import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "Notice of Privacy Practices (HIPAA) | Three Rivers Behavioral Health";
+const pageDescription = "Review our Notice of Privacy Practices and learn how Three Rivers Behavioral Health protects your health information in compliance with HIPAA regulations.";
+const pageKeywords = "HIPAA privacy practices, patient privacy, health information protection, HIPAA compliance, protected health information, patient privacy rights, medical records privacy";
+const canonicalUrl = "https://www.trbhcares.com/notice-of-privacy-practices-hipaa";
 ---
 
-<Layout>
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+  ogTitle="HIPAA Privacy Practices | Three Rivers Behavioral Health"
+  ogDescription="Our commitment to protecting your health information under HIPAA regulations."
+  ogUrl={canonicalUrl}
+  canonicalUrl={canonicalUrl}
+  robots="index, follow"
+>
 	<Hippa />
 </Layout>

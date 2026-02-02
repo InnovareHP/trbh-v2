@@ -1,8 +1,81 @@
 ---
 import Location from "../components/location-contact/location-contact";
 import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "Location & Contact | Directions & Phone | Three Rivers Behavioral Health";
+const pageDescription = "Visit Three Rivers Behavioral Health at 4043 Irene St, West Mifflin, PA 15122. Contact us 24/7 at 1-888-391-0229 for admissions and information. Serving Pittsburgh and Western Pennsylvania.";
+const pageKeywords = "Three Rivers Behavioral Health location, psychiatric hospital West Mifflin address, mental health facility Pittsburgh directions, Three Rivers contact number, psychiatric hospital near Pittsburgh, mental health hospital Allegheny County, directions to Three Rivers Behavioral Health, psychiatric facility Western PA location, how to get to psychiatric hospital, Three Rivers phone number, mental health crisis contact Pittsburgh, psychiatric hospital contact information, emergency mental health Pittsburgh, Three Rivers address West Mifflin, psychiatric facility near me Pittsburgh area, mental health hospital location map, psychiatric care Western Pennsylvania, contact psychiatric hospital, Three Rivers hours phone, mental health facility directions Pittsburgh";
+const canonicalUrl = "https://www.trbhcares.com/location-contact";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Hospital",
+  "name": "Three Rivers Behavioral Health",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4043 Irene St",
+    "addressLocality": "West Mifflin",
+    "addressRegion": "PA",
+    "postalCode": "15122",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "40.389874",
+    "longitude": "-79.8779095"
+  },
+  "telephone": "+1-888-391-0229",
+  "faxNumber": "+1-412-706-9202",
+  "url": "https://www.trbhcares.com",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "23:59"
+  }
+};
+
+const breadcrumbStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.trbhcares.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Location & Contact",
+      "item": canonicalUrl
+    }
+  ]
+};
 ---
 
-<Layout>
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+  ogTitle="Location & Contact Information | Three Rivers Behavioral Health"
+  ogDescription="Located in West Mifflin, PA. Call 24/7: 1-888-391-0229. Serving Pittsburgh and Western Pennsylvania with psychiatric care."
+  ogImage="https://www.trbhcares.com/background/Our_Focus_Banner.jpg"
+  ogUrl={canonicalUrl}
+  twitterTitle="Contact Three Rivers Behavioral Health | West Mifflin, PA"
+  twitterDescription="4043 Irene St, West Mifflin, PA 15122 | 24/7 Phone: 1-888-391-0229"
+  twitterImage="https://www.trbhcares.com/background/Our_Focus_Banner.jpg"
+  canonicalUrl={canonicalUrl}
+  structuredData={[structuredData, breadcrumbStructuredData]}
+>
 	<Location />
 </Layout>

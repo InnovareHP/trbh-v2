@@ -1,8 +1,22 @@
 ---
 import Price from "../components/price-transparency/price-transparency";
 import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "Price Transparency | Healthcare Pricing Information | Three Rivers Behavioral Health";
+const pageDescription = "View standard charges and pricing information for services at Three Rivers Behavioral Health in compliance with federal price transparency requirements.";
+const pageKeywords = "psychiatric hospital pricing, mental health hospital costs, price transparency, healthcare pricing, psychiatric services costs, mental health treatment pricing, hospital standard charges, Three Rivers pricing information";
+const canonicalUrl = "https://www.trbhcares.com/price-transparency";
 ---
 
-<Layout>
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+  ogTitle="Price Transparency | Three Rivers Behavioral Health"
+  ogDescription="Standard charges and pricing information for psychiatric and mental health services."
+  ogUrl={canonicalUrl}
+  canonicalUrl={canonicalUrl}
+  robots="index, follow"
+>
 	<Price />
 </Layout>

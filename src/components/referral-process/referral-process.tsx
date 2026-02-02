@@ -2,29 +2,40 @@ import Breadcrumb from "../sub-layout/sub-layout";
 
 const ReferralProcess = () => {
   return (
-    <div className="min-h-fit">
-      <div className="flex flex-col items-center justify-center mb-8">
+    <>
+      <header className="flex flex-col items-center justify-center mb-8">
         <img
           src="/background/referral_process_2000x375.jpg"
-          alt="Referral Process Banner"
-          loading="lazy"
+          alt="Referral process banner showing pathway to Three Rivers Behavioral Health admission"
+          width={2000}
+          height={375}
+          fetchPriority="high"
           className="w-full h-[150px] md:h-[350px] object-cover"
         />
         <div className="h-4 w-full bg-gradient-to-r from-cyan-600 via-gray-300 to-cyan-600"></div>
-      </div>
+      </header>
       <Breadcrumb pathname="/referral-process" title="Referral Process" />
 
-      <div className="max-w-7xl mx-auto px-6 py-10">
-        <p className="text-4xl font-bold text-[#0097b2] mb-6">
+      <main className="max-w-7xl mx-auto px-6 py-10">
+        <h1
+          id="referral-process-heading"
+          className="text-4xl font-bold text-[#0097b2] mb-6"
+        >
           Referral Process
-        </p>
+        </h1>
 
-        <div className="space-y-6 text-sm max-w-4xl">
+        <section
+          aria-labelledby="referral-process-heading"
+          className="space-y-6 text-sm max-w-4xl"
+        >
           {/* Information Gathering */}
           <div className="space-y-4">
-            <p className="text-lg font-semibold text-[#0097b2] mb-2">
+            <h2
+              id="information-gathering-heading"
+              className="text-lg font-semibold text-[#0097b2] mb-2"
+            >
               Information Gathering
-            </p>
+            </h2>
             <p className="text-gray-700 leading-relaxed">
               Prior to a potential admission to one of our three levels of care,
               our clinical team will gather relevant and pertinent information
@@ -38,15 +49,29 @@ const ReferralProcess = () => {
             </p>
 
             <p>
-              Please call our <strong>Intake Line at 1-888-391-2655.</strong>
+              Please call our{" "}
+              <strong>
+                Intake Line at{" "}
+                <a
+                  href="tel:1-888-391-2655"
+                  aria-label="Call Three Rivers Behavioral Health Intake Line at 1-888-391-2655"
+                  className="text-[#0097b2] hover:underline"
+                >
+                  1-888-391-2655
+                </a>
+                .
+              </strong>
             </p>
           </div>
 
           {/* Assessment and Admission */}
           <div className="space-y-4">
-            <p className="text-lg font-semibold text-[#0097b2] mb-2">
+            <h2
+              id="assessment-admission-heading"
+              className="text-lg font-semibold text-[#0097b2] mb-2"
+            >
               Assessment and Admission
-            </p>
+            </h2>
             <p className="text-gray-700 leading-relaxed">
               Once the clinical information is reviewed by a practitioner, our
               clinical team manages all document copying and faxing, compiles
@@ -57,9 +82,12 @@ const ReferralProcess = () => {
 
           {/* Onsite Assessment */}
           <div className="space-y-4">
-            <p className="text-lg font-semibold text-[#0097b2] mb-2">
+            <h2
+              id="onsite-assessment-heading"
+              className="text-lg font-semibold text-[#0097b2] mb-2"
+            >
               Onsite Assessment
-            </p>
+            </h2>
             <p className="text-gray-700 leading-relaxed">
               Our specially trained staff will be waiting for your arrival, from
               there we will conduct an Intake Assessment as well as a Nursing
@@ -67,9 +95,9 @@ const ReferralProcess = () => {
               relevant information to start your treatment program successfully.
             </p>
           </div>
-        </div>
-      </div>
-    </div>
+        </section>
+      </main>
+    </>
   );
 };
 

@@ -1,8 +1,22 @@
 ---
 import NonDiscrimination from "../components/notice-of-nondiscrimination/notice-of-nondiscrimination";
 import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "Notice of Nondiscrimination | Three Rivers Behavioral Health";
+const pageDescription = "Three Rivers Behavioral Health complies with applicable Federal civil rights laws and does not discriminate on the basis of race, color, national origin, age, disability, or sex.";
+const pageKeywords = "nondiscrimination policy, civil rights, equal access healthcare, patient rights, nondiscrimination notice, healthcare civil rights";
+const canonicalUrl = "https://www.trbhcares.com/notice-of-nondiscrimination";
 ---
 
-<Layout>
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+  ogTitle="Notice of Nondiscrimination | Three Rivers Behavioral Health"
+  ogDescription="Our commitment to equal access and nondiscrimination in healthcare services."
+  ogUrl={canonicalUrl}
+  canonicalUrl={canonicalUrl}
+  robots="index, follow"
+>
 	<NonDiscrimination />
 </Layout>

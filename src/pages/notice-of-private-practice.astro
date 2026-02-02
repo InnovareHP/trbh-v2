@@ -1,8 +1,22 @@
 ---
 import PrivatePractice from "../components/private-practice/private-practice";
 import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "Notice of Private Practice | Three Rivers Behavioral Health";
+const pageDescription = "Information about private practice providers and their relationship with Three Rivers Behavioral Health.";
+const pageKeywords = "private practice notice, provider information, healthcare provider disclosure, private practice providers";
+const canonicalUrl = "https://www.trbhcares.com/notice-of-private-practice";
 ---
 
-<Layout>
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+  ogTitle="Notice of Private Practice | Three Rivers Behavioral Health"
+  ogDescription="Information about private practice providers at Three Rivers Behavioral Health."
+  ogUrl={canonicalUrl}
+  canonicalUrl={canonicalUrl}
+  robots="index, follow"
+>
 	<PrivatePractice />
 </Layout>
