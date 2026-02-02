@@ -17,7 +17,7 @@ const Residential = () => {
 
         <p className="text-gray-700 leading-relaxed mb-4">
           Three Rivers Residential Treatment Program provides comprehensive
-          inpatient care for adults with behavioral, emotional, or psychiatric
+          residential care for adults with behavioral, emotional, or psychiatric
           challenges. The program is designed for adults aged 18 and older and
           offers a variety of evidence-based therapies tailored to each
           individual's needs.
@@ -39,8 +39,8 @@ const Residential = () => {
           </li>
           <li>
             Flexible Therapies: A range of evidence-based therapies, such as
-            Cognitive Behavioral Therapy (CBT) and Dialectical Behavior Therapy
-            (DBT), are employed to address specific needs.
+            Dialectical Behavior Therapy
+            (DBT) and Eye Movement Desensitization and Reprocessing Therapy (EMDR) Phases 1 and 2 interventions, are employed to address specific needs.
           </li>
           <li>
             Trauma-Focused Therapy: Therapists trained in trauma informed care
@@ -87,8 +87,7 @@ const Residential = () => {
 
         <p className="text-gray-700 leading-relaxed">
           The goal of the program is to help individuals develop to their
-          fullest potential and provide them with the coping skills needed for
-          success in life. By focusing on personalized and adaptable strategies,
+          fullest potential by offering a safe and supportive environment to engage in the regulation of the nervous system in a trauma-focused treatment program to promote mind-body integration. By focusing on personalized and adaptable strategies,
           the program aims to offer effective and supportive care for
           individuals with diverse experiences.
         </p>
