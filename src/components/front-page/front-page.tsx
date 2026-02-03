@@ -1,5 +1,3 @@
-import ButtonCTA from "../button";
-
 const IntroductionPage = () => {
   return (
     <div className="min-h-screen h-full">
@@ -54,10 +52,6 @@ const IntroductionPage = () => {
                 and comprehensive treatment for all their psychological,
                 behavioral, physical, and socialization needs.
               </p>
-              <ButtonCTA
-                text="LEARN MORE ABOUT THREE RIVERS BEHAVIORAL HEALTH"
-                href="/about-us"
-              />
             </div>
           </div>
         </section>

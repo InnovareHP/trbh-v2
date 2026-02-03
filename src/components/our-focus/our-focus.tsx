@@ -1,5 +1,4 @@
 import { linksOurFocus } from "../../lib/constant";
-import ButtonCTA from "../button";
 import Breadcrumb from "../sub-layout/sub-layout";
 
 const OurFocus = () => {
@@ -90,13 +89,6 @@ const OurFocus = () => {
           </div>
         </div>
       </main>
-
-      <div className="max-w-7xl mx-auto px-6 pb-6 text-center">
-        <p className="text-xl text-gray-700 mb-4">
-          Need help choosing the right program? Our team is available 24/7.
-        </p>
-        <ButtonCTA text="CALL NOW: 1-888-391-0229" href="tel:18883910229" />
-      </div>
 
       <div className="max-w-4xl mx-auto px-6 pb-10 grid grid-cols-1 md:grid-cols-2 gap-4">
         {linksOurFocus.map((btn, idx) => (

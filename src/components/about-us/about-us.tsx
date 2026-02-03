@@ -1,4 +1,3 @@
-import ButtonCTA from "../button";
 import Breadcrumb from "../sub-layout/sub-layout";
 
 export default function AboutUs() {
@@ -13,7 +12,10 @@ export default function AboutUs() {
         <h1 className="text-3xl font-bold text-primary">About Us</h1>
 
         <section className="space-y-2" aria-labelledby="who-we-are-heading">
-          <h2 id="who-we-are-heading" className="text-xl font-semibold text-primary">
+          <h2
+            id="who-we-are-heading"
+            className="text-xl font-semibold text-primary"
+          >
             Who We Are
           </h2>
 
@@ -43,8 +45,14 @@ export default function AboutUs() {
           </p>
         </section>
 
-        <section className="space-y-4" aria-labelledby="mental-health-focus-heading">
-          <h2 id="mental-health-focus-heading" className="text-xl font-semibold text-primary">
+        <section
+          className="space-y-4"
+          aria-labelledby="mental-health-focus-heading"
+        >
+          <h2
+            id="mental-health-focus-heading"
+            className="text-xl font-semibold text-primary"
+          >
             Focusing on the Mental Health Needs of Seniors
           </h2>
           <p>
@@ -90,7 +98,10 @@ export default function AboutUs() {
         </section>
 
         <section className="space-y-2" aria-labelledby="care-focus-heading">
-          <h2 id="care-focus-heading" className="text-xl font-semibold text-primary">
+          <h2
+            id="care-focus-heading"
+            className="text-xl font-semibold text-primary"
+          >
             Three Rivers Behavioral Health Focuses on the Needs of Adults and
             Older Adults
           </h2>
@@ -116,7 +127,10 @@ export default function AboutUs() {
         </section>
 
         <section className="space-y-2" aria-labelledby="contact-info-heading">
-          <h2 id="contact-info-heading" className="text-xl font-semibold text-primary">
+          <h2
+            id="contact-info-heading"
+            className="text-xl font-semibold text-primary"
+          >
             For More Information
           </h2>
           <address className="not-italic">
@@ -140,10 +154,6 @@ export default function AboutUs() {
               .
             </p>
           </address>
-          <p>We're here for all your behavioral health needs!</p>
-          <div className="mt-4 flex gap-4">
-            <ButtonCTA text="CONTACT US" href="/#contact" />
-          </div>
         </section>
       </main>
     </div>
