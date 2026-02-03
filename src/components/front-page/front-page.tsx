@@ -5,9 +5,9 @@ const IntroductionPage = () => {
     <div className="min-h-screen h-full">
       <div className="flex flex-col items-center justify-center mb-16">
         <img
-          src="/background/care-home-banner.webp"
+          src="/image/ourMission.jpg"
           alt="Welcome"
-          className="w-full h-[150px] md:h-[350px] object-cover"
+          className="w-full h-[200px] md:h-[550px] object-cover object-center"
         />
         <div className="h-4 w-full bg-gradient-to-r from-cyan-600 via-gray-300 to-cyan-600"></div>
       </div>
@@ -16,7 +16,7 @@ const IntroductionPage = () => {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div>
             <img
-              src="/image/ourMission.jpeg"
+              src="/image/Mission.jpg"
               alt="Doctor with patient"
               className="w-[350px] md:w-[450px] h-[250px] md:h-[400px] object-cover "
             />
