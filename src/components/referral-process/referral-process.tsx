@@ -5,10 +5,10 @@ const ReferralProcess = () => {
     <div className="min-h-fit">
       <div className="flex flex-col items-center justify-center mb-8">
         <img
-          src="/background/referral_process_2000x375.jpg"
+          src="/background/referral_process_2000x375.png"
           alt="Referral Process Banner"
           loading="lazy"
-          className="w-full h-[150px] md:h-[350px] object-cover"
+          className="w-full h-[200px] md:h-[550px] object-cover object-top"
         />
         <div className="h-4 w-full bg-gradient-to-r from-cyan-600 via-gray-300 to-cyan-600"></div>
       </div>

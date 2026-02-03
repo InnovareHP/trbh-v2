@@ -8,7 +8,7 @@ const OurFocus = () => {
         <img
           src="/background/Our_Focus_Banner.jpg"
           alt="Our Focus Banner"
-          className="w-full h-full md:h-[350px] object-cover"
+          className="w-full h-full md:h-[450px] object-cover"
         />
         <div className="h-4 w-full bg-gradient-to-r from-cyan-600 via-gray-300 to-cyan-600"></div>
       </div>
