@@ -1,3 +1,5 @@
+import ButtonCTA from "../button";
+
 const IntroductionPage = () => {
   return (
     <div className="min-h-screen h-full">
@@ -42,6 +44,13 @@ const IntroductionPage = () => {
               and comprehensive treatment for all their psychological,
               behavioral, physical, and socialization needs.
             </p>
+
+            <div className="flex flex-col max-w-xs md:max-w-3xl">
+              <ButtonCTA
+                text="LEARN MORE ABOUT THREE RIVERS BEHAVIORAL HEALTH"
+                href="/about-us"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -74,6 +83,13 @@ const IntroductionPage = () => {
               differentiated by discovery, innovation, compassionate, and
               excellent patient and family-centered care.
             </p>
+
+            <div className="flex flex-col max-w-xs md:max-w-3xl">
+              <ButtonCTA
+                text="WHY THREE RIVERS BEHAVIORAL HEALTH?"
+                href="/our-focus/psychiatric-inpatient-treatment-program/"
+              />
+            </div>
           </div>
         </div>
       </section>
