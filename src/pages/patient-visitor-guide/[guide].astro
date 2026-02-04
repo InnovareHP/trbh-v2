@@ -14,8 +14,160 @@ export function getStaticPaths() {
 }
 
 const { guide } = Astro.params;
+
+// SEO Data for each guide page
+const seoData: Record<string, any> = {
+  "preparing-for-your-stay": {
+    title: "Preparing for Your Stay | Admission Checklist | Three Rivers Behavioral Health",
+    description: "Complete guide to preparing for psychiatric hospitalization: what to bring, what to leave at home, admission process, and what to expect on arrival at Three Rivers Behavioral Health.",
+    keywords: "preparing for psychiatric hospital, what to pack mental health hospital, psychiatric admission checklist, what to bring psychiatric hospitalization, items not allowed psychiatric hospital, preparing elderly parent hospitalization, first day psychiatric hospital what to expect, psychiatric hospital packing list, mental health admission preparation, what documents bring psychiatric hospital, insurance psychiatric admission, identification requirements mental health hospital, clothing psychiatric hospital, personal items mental health facility, prohibited items psychiatric unit, preparing for mental health treatment, admission day psychiatric hospital, what happens first day psychiatric hospital, family preparation psychiatric admission, caregiver checklist mental health hospitalization, pre-admission requirements psychiatric care, getting ready for psychiatric stay, mental health hospital arrival process, preparing loved one psychiatric admission",
+    ogTitle: "Preparing for Your Psychiatric Hospital Stay | Three Rivers",
+    ogDescription: "Essential checklist and guide for preparing for admission: what to bring, required documents, and what to expect on arrival.",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Preparing for Your Psychiatric Hospital Stay",
+      "description": "Complete guide to preparing for psychiatric hospitalization at Three Rivers Behavioral Health",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Gather Required Documents",
+          "text": "Collect insurance information, identification, and medical records"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Pack Appropriate Items",
+          "text": "Bring comfortable clothing and personal hygiene items"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Review Hospital Policies",
+          "text": "Understand what items are not permitted in the facility"
+        }
+      ]
+    }
+  },
+  "during-your-stay": {
+    title: "During Your Stay | Daily Routine & Activities | Three Rivers Behavioral Health",
+    description: "What to expect during your psychiatric hospital stay: daily schedule, therapy sessions, activities, meals, and patient rights at Three Rivers Behavioral Health in West Mifflin, PA.",
+    keywords: "psychiatric hospital daily routine, what happens during mental health hospitalization, psychiatric hospital schedule, therapy during hospitalization, psychiatric hospital activities, mental health hospital daily life, what is psychiatric treatment like, typical day psychiatric hospital, group therapy mental health hospital, individual therapy psychiatric stay, psychiatric hospital meals, patient rights mental health facility, activities psychiatric unit, recreation therapy psychiatric hospital, visiting during psychiatric stay, phone calls psychiatric hospital, psychiatric hospital routine elderly, daily schedule mental health treatment, therapy sessions psychiatric care, psychiatric evaluation process, treatment planning hospitalization, medication management psychiatric hospital, nursing care mental health unit, safety protocols psychiatric facility, psychiatric hospital environment",
+    ogTitle: "What to Expect During Your Psychiatric Hospital Stay",
+    ogDescription: "Daily routine, therapy sessions, activities, and support during your mental health treatment at Three Rivers Behavioral Health.",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "During Your Stay at Three Rivers Behavioral Health",
+      "description": "Information about daily routine, activities, and care during psychiatric hospitalization"
+    }
+  },
+  "discharge-and-follow-up": {
+    title: "Discharge & Follow-Up Care | Psychiatric Hospital Discharge Planning | Three Rivers",
+    description: "Comprehensive discharge planning and follow-up care after psychiatric hospitalization: transition support, outpatient services, medication management, and continued care at Three Rivers Behavioral Health.",
+    keywords: "psychiatric hospital discharge process, mental health discharge planning, what happens after psychiatric hospitalization, follow-up care mental health, outpatient mental health after hospital, discharge planning elderly psychiatric care, transition from inpatient to outpatient, mental health aftercare programs, psychiatric medication management after discharge, continuing care mental health, post-hospitalization support, mental health follow-up appointments, discharge instructions psychiatric hospital, leaving psychiatric hospital, returning home after mental health treatment, discharge planning family involvement, psychiatric hospital to home transition, aftercare mental health elderly, outpatient therapy after hospitalization, medication continuity psychiatric discharge, safety plan mental health discharge, crisis plan after hospitalization, community mental health resources, follow-up psychiatric care Pittsburgh, discharge coordination mental health",
+    ogTitle: "Psychiatric Hospital Discharge & Follow-Up Care | Three Rivers",
+    ogDescription: "Comprehensive discharge planning and ongoing support to ensure successful transition and continued mental health recovery.",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "MedicalProcedure",
+      "name": "Psychiatric Hospital Discharge Planning",
+      "description": "Comprehensive discharge planning and follow-up care coordination for patients leaving psychiatric hospitalization"
+    }
+  },
+  "getting-help-at-home": {
+    title: "Getting Help at Home | Post-Discharge Support | Three Rivers Behavioral Health",
+    description: "Resources and support for mental health recovery at home: community services, outpatient programs, crisis support, and caregiver resources after psychiatric hospitalization.",
+    keywords: "mental health support at home, community mental health resources Pittsburgh, outpatient mental health programs, home health mental health services, mental health crisis support at home, caregiver support mental health, elderly mental health home care, community psychiatric services, mental health resources Western PA, support groups mental health Pittsburgh, outpatient therapy programs, mental health day programs, crisis hotlines mental health, emergency mental health resources, home-based mental health care elderly, family support mental health recovery, community resources after hospitalization, mental health case management, peer support mental health, recovery support services, mental health home visits, telehealth mental health services, medication management at home, psychiatric follow-up home care, mental health wellness programs community",
+    ogTitle: "Mental Health Support & Resources for Home Care | Three Rivers",
+    ogDescription: "Comprehensive community resources, support services, and programs for continued mental health recovery at home.",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Getting Mental Health Help at Home",
+      "description": "Resources and support services for mental health recovery in the community and at home"
+    }
+  },
+  "discharge-to-a-facility": {
+    title: "Discharge to a Facility | Skilled Nursing & Long-Term Care Placement | Three Rivers",
+    description: "Guidance on transitioning from psychiatric hospital to skilled nursing facilities, assisted living, or long-term care for seniors and adults needing continued support.",
+    keywords: "discharge to nursing home, skilled nursing mental health, long-term care after psychiatric hospital, assisted living mental health support, transitioning to care facility, nursing home placement psychiatric patient, discharge planning skilled nursing, elderly psychiatric care long-term, mental health nursing facility, geriatric psychiatric nursing home, psychiatric care assisted living, facility placement after hospitalization, nursing home mental health services, continuing care facility psychiatric, skilled nursing dementia psychiatric, long-term psychiatric care elderly, transitioning elderly parent care facility, discharge coordination nursing home, mental health in nursing facilities, psychiatric support skilled nursing, dementia care facility placement, behavioral health nursing home, geriatric psychiatric long-term care, facility options after psychiatric hospital, nursing home with psychiatric services",
+    ogTitle: "Discharge to Skilled Nursing or Long-Term Care Facility | Three Rivers",
+    ogDescription: "Coordinated transition planning for patients requiring continued care in skilled nursing or long-term care facilities.",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "MedicalProcedure",
+      "name": "Discharge to Care Facility",
+      "description": "Discharge planning and coordination for transition to skilled nursing or long-term care facilities"
+    }
+  },
+  "visitation": {
+    title: "Visitation Guidelines | Visiting Hours & Policies | Three Rivers Behavioral Health",
+    description: "Visitor information for Three Rivers Behavioral Health: visiting hours, policies, what to bring visitors, and how family can support patients during psychiatric hospitalization.",
+    keywords: "psychiatric hospital visiting hours, visiting mental health patient, psychiatric hospital visitor policies, can I visit family member psychiatric hospital, visiting hours mental health facility Pittsburgh, psychiatric patient visitation guidelines, what can visitors bring psychiatric hospital, family visits mental health hospital, visiting elderly parent psychiatric care, psychiatric hospital visitor restrictions, when can I visit psychiatric patient, video visits mental health hospital, virtual visits psychiatric facility, visiting rules psychiatric unit, family involvement psychiatric treatment, supporting loved one in psychiatric hospital, visitor guidelines mental health facility, psychiatric hospital family visits, visiting someone in mental health crisis, caregiver visits psychiatric hospital, visiting hours geriatric psychiatry, family visitation policies, visitor check-in psychiatric hospital, what to know before visiting psychiatric patient",
+    ogTitle: "Visiting Hours & Guidelines | Three Rivers Behavioral Health",
+    ogDescription: "Visitor information, policies, and guidelines to support family involvement during psychiatric treatment.",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Visitation Guidelines",
+      "description": "Visitor policies and guidelines for Three Rivers Behavioral Health"
+    }
+  }
+};
+
+const pageSeo = seoData[guide as string] || {
+  title: "Patient & Visitor Guide | Three Rivers Behavioral Health",
+  description: "Information for patients and visitors at Three Rivers Behavioral Health",
+  keywords: "patient guide, visitor information, psychiatric hospital",
+  ogTitle: "Patient & Visitor Guide | Three Rivers",
+  ogDescription: "Essential information for patients and families"
+};
+
+const canonicalUrl = `https://www.trbhcares.com/patient-visitor-guide/${guide}`;
+
+// Breadcrumb Structured Data
+const breadcrumbStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.trbhcares.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Patient & Visitor Guide",
+      "item": "https://www.trbhcares.com/patient-visitor-guide"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": pageSeo.title.split("|")[0].trim(),
+      "item": canonicalUrl
+    }
+  ]
+};
+
+const structuredDataArray = pageSeo.structuredData
+  ? [pageSeo.structuredData, breadcrumbStructuredData]
+  : [breadcrumbStructuredData];
 ---
 
-<Layout>
-  <GuidePage title={guide} pathname={`/patient & visitor guide/${guide}`} />
+<Layout
+  title={pageSeo.title}
+  description={pageSeo.description}
+  keywords={pageSeo.keywords}
+  ogTitle={pageSeo.ogTitle}
+  ogDescription={pageSeo.ogDescription}
+  ogImage="https://www.trbhcares.com/background/Our_Focus_Banner.jpg"
+  ogUrl={canonicalUrl}
+  twitterTitle={pageSeo.ogTitle}
+  twitterDescription={pageSeo.ogDescription}
+  twitterImage="https://www.trbhcares.com/background/Our_Focus_Banner.jpg"
+  canonicalUrl={canonicalUrl}
+  structuredData={structuredDataArray}
+>
+  <GuidePage title={guide} pathname={`/patient-visitor-guide/${guide}`} />
 </Layout>

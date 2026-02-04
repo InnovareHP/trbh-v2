@@ -2,6 +2,40 @@
 import Footer from "../components/footer";
 import NavBar from "../components/nav-bar";
 import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogUrl?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  canonicalUrl?: string;
+  robots?: string;
+  structuredData?: object;
+}
+
+const {
+  title = "Three Rivers Behavioral Health | Psychiatric Inpatient, Residential & Intensive Outpatient Programs",
+  description = "Three Rivers Behavioral Health offers compassionate and comprehensive psychiatric inpatient, residential treatment and intensive outpatient programs for adults with mental health and neuro-psychiatric diagnoses in West Mifflin, PA.",
+  keywords = "Three Rivers Behavioral Health, TRBH, psychiatric inpatient treatment, adult residential mental health services, intensive outpatient program IOP, older adult psychiatric care, anxiety treatment, depression treatment, trauma informed therapy, EMDR, DBT, schizophrenia treatment, West Mifflin psychiatric hospital, PA mental health facility, mental health hospital Pittsburgh area, neuropsychiatric disorders treatment, dual diagnosis care",
+  ogTitle = "Three Rivers Behavioral Health | Healing Minds & Changing Lives",
+  ogDescription = "Providing patient-focused psychiatric care: inpatient hospitalization, residential services & intensive outpatient programs for adults at Three Rivers Behavioral Health.",
+  ogImage = "https://trbhcares.com/background/care-home-banner.webp",
+  ogUrl = "https://trbhcares.com/",
+  twitterTitle = "Three Rivers Behavioral Health | Adult Psychiatric Programs",
+  twitterDescription = "Explore Three Rivers Behavioral Health's comprehensive programs for adults: inpatient, residential, and intensive outpatient psychiatric services.",
+  twitterImage = "https://trbhcares.com/background/care-home-banner.webp",
+  canonicalUrl = "https://trbhcares.com/",
+  robots = "index, follow",
+  structuredData,
+} = Astro.props;
+
+const siteName = "Three Rivers Behavioral Health";
 ---
 
 <!doctype html>
@@ -9,7 +43,18 @@ import "../styles/global.css";
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=yes" />
+  <meta name="theme-color" content="#0097b2" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+  <!-- Preload Critical Resources -->
+  <link rel="preload" as="image" href="/background/care-home-banner.webp" fetchpriority="high" />
 
   <!-- Font -->
   <link
@@ -18,43 +63,52 @@ import "../styles/global.css";
   />
 
   <!-- Title & Description -->
-  <title>Three Rivers Behavioral Health | Psychiatric Inpatient, Residential & Intensive Outpatient Programs</title>
-  <meta
-    name="description"
-    content="Three Rivers Behavioral Health offers compassionate and comprehensive psychiatric inpatient, residential treatment and intensive outpatient programs for adults with mental health and neuro-psychiatric diagnoses in West Mifflin, PA."
-  />
+  <title>{title}</title>
+  <meta name="description" content={description} />
 
   <!-- Keywords -->
-  <meta
-    name="keywords"
-    content="Three Rivers Behavioral Health, TRBH, psychiatric inpatient treatment, adult residential mental health services, intensive outpatient program IOP, older adult psychiatric care, anxiety treatment, depression treatment, trauma informed therapy, EMDR, DBT, schizophrenia treatment, West Mifflin psychiatric hospital, PA mental health facility, mental health hospital Pittsburgh area, neuropsychiatric disorders treatment, dual diagnosis care"
-  />
+  <meta name="keywords" content={keywords} />
 
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://trbhcares.com/" />
-  <meta property="og:title" content="Three Rivers Behavioral Health | Healing Minds & Changing Lives" />
-  <meta
-    property="og:description"
-    content="Providing patient-focused psychiatric care: inpatient hospitalization, residential services & intensive outpatient programs for adults at Three Rivers Behavioral Health."
-  />
-  <meta property="og:image" content="/background/care-home-banner.webp" />
+  <meta property="og:site_name" content={siteName} />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content={ogUrl} />
+  <meta property="og:title" content={ogTitle} />
+  <meta property="og:description" content={ogDescription} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content={ogTitle} />
+  <meta property="og:image:secure_url" content={ogImage} />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Three Rivers Behavioral Health | Adult Psychiatric Programs" />
-  <meta
-    name="twitter:description"
-    content="Explore Three Rivers Behavioral Health’s comprehensive programs for adults: inpatient, residential, and intensive outpatient psychiatric services."
-  />
-  <meta name="twitter:image" content="/background/care-home-banner.webp" />
+  <meta name="twitter:title" content={twitterTitle} />
+  <meta name="twitter:description" content={twitterDescription} />
+  <meta name="twitter:image" content={twitterImage} />
+  <meta name="twitter:image:alt" content={twitterTitle} />
 
   <!-- Robots & Author -->
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="Three Rivers Behavioral Health" />
+  <meta name="robots" content={robots} />
+  <meta name="author" content={siteName} />
+  <meta name="geo.region" content="US-PA" />
+  <meta name="geo.placename" content="West Mifflin" />
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://trbhcares.com/" />
+  <link rel="canonical" href={canonicalUrl} />
+
+  <!-- Structured Data (JSON-LD) -->
+  {structuredData && (
+    Array.isArray(structuredData) ? (
+      structuredData.map((data) => (
+        <script type="application/ld+json" set:html={JSON.stringify(data)} />
+      ))
+    ) : (
+      <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    )
+  )}
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2W3TT2HD37"></script>

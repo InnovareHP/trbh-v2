@@ -10,8 +10,73 @@ export function getStaticPaths() {
 }
 
 const { guide } = Astro.params;
+
+const seoData: Record<string, any> = {
+  "preparing-for-your-stay": {
+    title: "Preparing for IOP | Intensive Outpatient Program Guide | Three Rivers Behavioral Health",
+    description: "Get ready for our Intensive Outpatient Program: what to expect, schedule information, and how to prepare for your first day of IOP treatment at Three Rivers Behavioral Health.",
+    keywords: "preparing for IOP, intensive outpatient program preparation, what to expect IOP, first day intensive outpatient, IOP program schedule, preparing for outpatient mental health, IOP requirements, what to bring IOP program, intensive outpatient first visit, getting started IOP, outpatient mental health preparation, IOP admission process, preparing for mental health day program, IOP orientation, starting intensive outpatient therapy",
+    ogTitle: "Preparing for Intensive Outpatient Program | Three Rivers",
+    ogDescription: "Everything you need to know to prepare for your first day in our Intensive Outpatient Program."
+  },
+  "during-your-stay": {
+    title: "During Your IOP Treatment | What to Expect | Three Rivers Behavioral Health",
+    description: "Learn about daily routine, therapy sessions, and what to expect during your Intensive Outpatient Program treatment at Three Rivers Behavioral Health.",
+    keywords: "IOP daily schedule, intensive outpatient routine, what happens during IOP, IOP therapy sessions, intensive outpatient program activities, typical day IOP, outpatient mental health treatment, IOP group therapy, individual therapy IOP, IOP program structure, intensive outpatient schedule, mental health day program routine, IOP treatment activities, outpatient psychiatric therapy, what to expect IOP program",
+    ogTitle: "What to Expect During IOP Treatment | Three Rivers",
+    ogDescription: "Daily routine, therapy sessions, and activities during Intensive Outpatient Program treatment."
+  }
+};
+
+const pageSeo = seoData[guide as string] || {
+  title: "Intensive Outpatient Program Guide | Three Rivers Behavioral Health",
+  description: "Information about our Intensive Outpatient Program at Three Rivers Behavioral Health",
+  keywords: "intensive outpatient program, IOP guide",
+  ogTitle: "IOP Guide | Three Rivers",
+  ogDescription: "Intensive Outpatient Program information"
+};
+
+const canonicalUrl = `https://www.trbhcares.com/inpatient-guide/${guide}`;
+
+const breadcrumbStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.trbhcares.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Intensive Outpatient Program",
+      "item": "https://www.trbhcares.com/inpatient-guide"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": pageSeo.title.split("|")[0].trim(),
+      "item": canonicalUrl
+    }
+  ]
+};
 ---
 
-<Layout>
-  <GuidePage title={guide} pathname={`/patient & visitor guide/${guide}`} />
+<Layout
+  title={pageSeo.title}
+  description={pageSeo.description}
+  keywords={pageSeo.keywords}
+  ogTitle={pageSeo.ogTitle}
+  ogDescription={pageSeo.ogDescription}
+  ogImage="https://www.trbhcares.com/background/Our_Focus_Banner.jpg"
+  ogUrl={canonicalUrl}
+  twitterTitle={pageSeo.ogTitle}
+  twitterDescription={pageSeo.ogDescription}
+  twitterImage="https://www.trbhcares.com/background/Our_Focus_Banner.jpg"
+  canonicalUrl={canonicalUrl}
+  structuredData={[breadcrumbStructuredData]}
+>
+  <GuidePage title={guide} pathname={`/inpatient-guide/${guide}`} />
 </Layout>

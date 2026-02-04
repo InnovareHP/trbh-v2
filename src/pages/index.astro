@@ -1,8 +1,198 @@
 ---
 import Welcome from "../components/front-page/front-page";
 import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "Psychiatric Hospital Pittsburgh | Inpatient & Residential Mental Health Care";
+const pageDescription = "Three Rivers Behavioral Health provides 24/7 psychiatric inpatient treatment, residential mental health services, and intensive outpatient programs for adults in West Mifflin, PA. Accepting Medicare. Call 1-888-391-0229.";
+const pageKeywords = "Three Rivers Behavioral Health, TRBH, psychiatric hospital near me, mental health hospital Pittsburgh, where to take elderly parent with depression, senior psychiatric care West Mifflin, my mom needs mental health help, elderly father dementia and depression, adult son schizophrenia treatment, psychiatric help for aging parents, mental health crisis what to do, how to admit someone to psychiatric hospital, 24/7 mental health emergency Pittsburgh, Medicare psychiatric hospital Pennsylvania, older adult depression treatment, senior anxiety inpatient care, elderly mental health facility Allegheny County, caregiver burnout psychiatric support, family mental health crisis help, geriatric psychiatry Pittsburgh area, adult children mental illness support, spouse depression hospitalization, parent Alzheimer's behavioral issues, psychiatric care for veterans, PTSD treatment adults Pennsylvania, mental health help for seniors near me, when does elderly parent need psychiatric hospital, finding mental health care for loved one, psychiatric emergency room alternative, crisis stabilization older adults, residential mental health seniors, affordable psychiatric care Pittsburgh, mental health hospital that accepts Medicare, psychiatric facility Western PA";
+const canonicalUrl = "https://www.trbhcares.com/";
+
+// Structured Data for LocalBusiness/MedicalOrganization
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": ["Hospital", "MedicalOrganization", "MedicalBusiness"],
+  "name": "Three Rivers Behavioral Health",
+  "alternateName": "TRBH",
+  "url": "https://www.trbhcares.com",
+  "logo": "https://www.trbhcares.com/logo/trbh-logo.png",
+  "image": "https://www.trbhcares.com/background/care-home-banner.webp",
+  "description": pageDescription,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4043 Irene St",
+    "addressLocality": "West Mifflin",
+    "addressRegion": "PA",
+    "postalCode": "15122",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "40.389874",
+    "longitude": "-79.8779095"
+  },
+  "telephone": "+1-888-391-0229",
+  "faxNumber": "+1-412-706-9202",
+  "priceRange": "$$",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "availableService": [
+    {
+      "@type": "MedicalProcedure",
+      "name": "Psychiatric Inpatient Treatment",
+      "description": "24/7 comprehensive inpatient psychiatric care for adults experiencing mental health crises"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Residential Mental Health Services",
+      "description": "Adult residential mental health treatment programs for sustained recovery"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Intensive Outpatient Program (IOP)",
+      "description": "Intensive outpatient psychiatric treatment programs for flexible mental health care"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Older Adult Psychiatric Care",
+      "description": "Specialized psychiatric care for older adults with age-specific mental health needs"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "EMDR Therapy",
+      "description": "Eye Movement Desensitization and Reprocessing for trauma treatment"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "DBT Therapy",
+      "description": "Dialectical Behavior Therapy for emotional regulation and crisis management"
+    }
+  ],
+  "medicalSpecialty": [
+    "Psychiatry",
+    "Mental Health Services",
+    "Behavioral Health",
+    "Psychiatric Inpatient Care",
+    "Residential Treatment",
+    "Intensive Outpatient Programs",
+    "Geriatric Psychiatry",
+    "Trauma-Informed Care",
+    "Dual Diagnosis Treatment"
+  ],
+  "areaServed": [
+    {
+      "@type": "State",
+      "name": "Pennsylvania"
+    },
+    {
+      "@type": "City",
+      "name": "Pittsburgh"
+    },
+    {
+      "@type": "City",
+      "name": "West Mifflin"
+    }
+  ],
+  "sameAs": [
+    "https://www.google.com/maps/place/Three+Rivers+Behavioral+Health/@40.389874,-79.8779095,17z"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Mental Health Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mental Health Crisis Care",
+          "description": "24/7 emergency psychiatric services for adults in mental health crisis"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Depression Treatment",
+          "description": "Comprehensive treatment for major depressive disorder and seasonal depression"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Anxiety Treatment",
+          "description": "Evidence-based treatment for anxiety disorders and panic attacks"
+        }
+      }
+    ]
+  }
+};
+
+// FAQ Structured Data for AI Search Optimization
+const faqStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where can I get psychiatric help near Pittsburgh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three Rivers Behavioral Health in West Mifflin, PA (Pittsburgh area) provides 24/7 psychiatric inpatient care, residential mental health services, and intensive outpatient programs for adults."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When do I need inpatient mental health care?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Inpatient mental health care may be needed if you or a loved one is experiencing severe depression, suicidal thoughts, psychosis, severe anxiety, or inability to care for oneself. Three Rivers Behavioral Health provides 24/7 crisis psychiatric care."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What mental health services does Three Rivers Behavioral Health offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three Rivers Behavioral Health offers psychiatric inpatient treatment, adult residential mental health services, intensive outpatient programs (IOP), older adult psychiatric care, EMDR therapy, DBT therapy, and trauma-informed care."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Three Rivers Behavioral Health treat seasonal depression?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Three Rivers Behavioral Health treats seasonal affective disorder (SAD) and winter depression through comprehensive psychiatric care including therapy, medication management, and evidence-based treatment approaches."
+      }
+    }
+  ]
+};
 ---
 
-<Layout>
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+  ogTitle={pageTitle}
+  ogDescription={pageDescription}
+  ogImage="https://www.trbhcares.com/background/care-home-banner.webp"
+  ogUrl={canonicalUrl}
+  twitterTitle={pageTitle}
+  twitterDescription={pageDescription}
+  twitterImage="https://www.trbhcares.com/background/care-home-banner.webp"
+  canonicalUrl={canonicalUrl}
+  structuredData={[structuredData, faqStructuredData]}
+>
 	<Welcome />
 </Layout>

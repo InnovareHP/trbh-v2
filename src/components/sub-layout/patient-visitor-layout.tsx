@@ -34,8 +34,8 @@ const PatientVisitorLayout = ({
         <div className="lg:col-span-2">
           <div className="flex gap-10">
             {children}
-            {pathname !== "/patient & visitor guide/preparing-for-your-stay" &&
-            pathname !== "/patient & visitor guide/during-your-stay" ? (
+            {pathname !== "/patient-visitor-guide/preparing-for-your-stay" &&
+            pathname !== "/patient-visitor-guide/during-your-stay" ? (
               <aside className="space-y-4 hidden md:block">
                 {linksPatientVisitorGuide.map((item, idx) => (
                   <div

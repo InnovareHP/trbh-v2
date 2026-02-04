@@ -13,8 +13,162 @@ export function getStaticPaths() {
 }
 
 const { focus } = Astro.params;
+
+// SEO Data for each page
+const seoData: Record<string, any> = {
+  "psychiatric-inpatient-treatment-program": {
+    title: "Psychiatric Inpatient Treatment Program | 24/7 Crisis Care | Three Rivers Behavioral Health",
+    description: "Three Rivers Behavioral Health provides 24/7 psychiatric inpatient treatment for adults and seniors experiencing mental health crises. Comprehensive care for depression, anxiety, psychosis, and more in West Mifflin, PA.",
+    keywords: "psychiatric inpatient program, mental health crisis hospitalization, when to hospitalize for mental health, inpatient psychiatric care for elderly, adult psychiatric hospitalization Pittsburgh, 24/7 mental health crisis care, emergency psychiatric admission, what is inpatient psychiatric treatment, how long is psychiatric hospitalization, involuntary psychiatric commitment Pennsylvania, voluntary psychiatric admission, psychiatric hospital for suicidal ideation, inpatient care severe depression, acute psychiatric care seniors, mental health crisis intervention adults, psychiatric stabilization program, short-term psychiatric hospitalization, inpatient mental health for elderly parents, Medicare inpatient psychiatric care, what happens during psychiatric hospitalization, psychiatric hospital daily routine, inpatient treatment schizophrenia, psychosis hospitalization, severe anxiety inpatient care, elderly depression hospitalization, geriatric psychiatric inpatient unit, adult mental health crisis admission, family involvement inpatient psychiatric care",
+    ogTitle: "24/7 Psychiatric Inpatient Treatment | Three Rivers Behavioral Health",
+    ogDescription: "Immediate psychiatric crisis care and inpatient treatment for adults and seniors. Expert care for depression, anxiety, psychosis, and mental health emergencies.",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "MedicalTherapy",
+      "name": "Psychiatric Inpatient Treatment Program",
+      "provider": {
+        "@type": "Hospital",
+        "name": "Three Rivers Behavioral Health"
+      },
+      "description": "24/7 comprehensive psychiatric inpatient care for adults and seniors experiencing acute mental health crises including depression, anxiety, psychosis, and other psychiatric emergencies.",
+      "availableService": {
+        "@type": "MedicalProcedure",
+        "name": "Crisis Psychiatric Care"
+      }
+    }
+  },
+  "conditions-and-therapy-programs": {
+    title: "Conditions & Therapy Programs | EMDR, DBT & Specialized Treatment | Three Rivers Behavioral Health",
+    description: "Specialized therapy programs for anxiety, depression, PTSD, schizophrenia, dementia, and more. EMDR and DBT therapy available for adults and seniors at Three Rivers Behavioral Health in West Mifflin, PA.",
+    keywords: "what mental health conditions are treated, anxiety treatment programs elderly, depression therapy seniors Pittsburgh, PTSD treatment adults Pennsylvania, schizophrenia treatment programs, dementia behavioral therapy, Alzheimer's psychiatric care, EMDR therapy for trauma elderly, DBT therapy adults Pittsburgh, bipolar disorder treatment seniors, psychosis treatment programs, what is EMDR therapy, what is DBT therapy, trauma therapy for older adults, mental health conditions we treat, psychiatric treatment for dementia patients, elderly anxiety therapy programs, senior depression treatment options, neuropsychiatric disorder treatment, brain injury mental health treatment, stroke psychiatric care, post-traumatic stress elderly veterans, acute stress disorder treatment, adjustment disorder therapy seniors, behavioral disturbance treatment dementia, therapy programs family involvement, evidence-based mental health therapy, geriatric psychiatric therapy, adult mental health therapy programs Pittsburgh",
+    ogTitle: "Mental Health Conditions & Therapy Programs | Three Rivers",
+    ogDescription: "Evidence-based therapy including EMDR and DBT for anxiety, depression, PTSD, schizophrenia, and dementia in adults and seniors.",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "MedicalTherapy",
+      "name": "Conditions and Therapy Programs",
+      "provider": {
+        "@type": "Hospital",
+        "name": "Three Rivers Behavioral Health"
+      },
+      "description": "Comprehensive therapy programs including EMDR and DBT for treating anxiety, depression, PTSD, schizophrenia, dementia, and other psychiatric conditions in adults and seniors.",
+      "treatsHealthCondition": [
+        "Anxiety Disorders",
+        "Depression",
+        "PTSD",
+        "Schizophrenia",
+        "Dementia",
+        "Alzheimer's Disease"
+      ]
+    }
+  },
+  "nutrition-program": {
+    title: "Nutrition Program | Dietary Support for Mental Health | Three Rivers Behavioral Health",
+    description: "Comprehensive nutrition program supporting mental health treatment for adults and seniors. Registered dietitians provide personalized meal plans at Three Rivers Behavioral Health in West Mifflin, PA.",
+    keywords: "mental health nutrition program, psychiatric hospital food services, dietitian for mental health patients, nutrition support elderly psychiatric care, meal planning mental health hospital, dietary needs seniors mental health, registered dietitian psychiatric facility, nutrition and mental health seniors, eating support dementia patients, dietary accommodations psychiatric hospital, nutrition program elderly depression, food and mental health connection, specialized diet mental health treatment, nutritional support psychiatric inpatient, meals for psychiatric patients, dietary consultation mental health, nutrition therapy seniors Pittsburgh, psychiatric hospital dietary services, healthy eating mental health recovery, nutrition assessment psychiatric care, dietary support elderly hospitalization, meal supervision psychiatric unit, nutrition counseling mental health, dietary restrictions psychiatric hospital, food allergies mental health facility",
+    ogTitle: "Nutrition Program for Mental Health Treatment | Three Rivers",
+    ogDescription: "Expert dietary support and nutrition counseling as part of comprehensive mental health treatment for adults and seniors.",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "MedicalTherapy",
+      "name": "Nutrition Program",
+      "provider": {
+        "@type": "Hospital",
+        "name": "Three Rivers Behavioral Health"
+      },
+      "description": "Comprehensive nutrition program with registered dietitians providing personalized dietary support for mental health patients."
+    }
+  },
+  "brochure": {
+    title: "Download Our Brochure | Three Rivers Behavioral Health Information",
+    description: "Download the Three Rivers Behavioral Health brochure to learn about our psychiatric programs, services, and admission process for adults and seniors in West Mifflin, PA.",
+    keywords: "Three Rivers behavioral health brochure, psychiatric hospital information PDF, mental health facility brochure Pittsburgh, download psychiatric hospital guide, mental health services brochure, psychiatric care information packet, hospital brochure for families, mental health facility overview, psychiatric program details, admission information brochure, what to expect psychiatric hospital guide, mental health hospital brochure elderly, psychiatric services guide seniors, family guide psychiatric hospitalization, mental health facility information sheet",
+    ogTitle: "Three Rivers Behavioral Health Brochure & Information",
+    ogDescription: "Download comprehensive information about our psychiatric programs, services, and admission process.",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Three Rivers Behavioral Health Brochure",
+      "provider": {
+        "@type": "Hospital",
+        "name": "Three Rivers Behavioral Health"
+      },
+      "description": "Informational brochure about Three Rivers Behavioral Health programs and services."
+    }
+  },
+  "referral-process": {
+    title: "Referral Process | How to Admit a Patient | Three Rivers Behavioral Health",
+    description: "Learn about the psychiatric admission and referral process at Three Rivers Behavioral Health. 24/7 intake support for families and healthcare providers in West Mifflin, PA.",
+    keywords: "how to refer patient to psychiatric hospital, psychiatric admission process, mental health hospital referral Pittsburgh, how to admit elderly parent mental health, psychiatric hospitalization steps, referral process mental health crisis, admission requirements psychiatric hospital, who can refer to psychiatric hospital, family psychiatric hospital referral, doctor referral mental health hospitalization, emergency psychiatric admission process, how to get someone psychiatric help, involuntary psychiatric admission process, voluntary psychiatric admission steps, what documents needed psychiatric admission, intake process mental health hospital, psychiatric evaluation admission, pre-admission screening mental health, insurance verification psychiatric admission, Medicare psychiatric admission process, referral guidelines mental health facility, admission criteria psychiatric hospital, how long does psychiatric admission take, psychiatric intake assessment, 24/7 psychiatric admission support",
+    ogTitle: "Psychiatric Hospital Referral & Admission Process | Three Rivers",
+    ogDescription: "Simple referral and admission process with 24/7 intake support. Learn how to admit a loved one or refer a patient to our psychiatric facility.",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Referral Process",
+      "provider": {
+        "@type": "Hospital",
+        "name": "Three Rivers Behavioral Health"
+      },
+      "description": "Information about the psychiatric admission and referral process at Three Rivers Behavioral Health."
+    }
+  }
+};
+
+const pageSeo = seoData[focus as string] || {
+  title: "Three Rivers Behavioral Health | Mental Health Programs",
+  description: "Comprehensive psychiatric care programs at Three Rivers Behavioral Health",
+  keywords: "mental health programs, psychiatric care",
+  ogTitle: "Three Rivers Behavioral Health",
+  ogDescription: "Mental health care programs for adults and seniors"
+};
+
+const canonicalUrl = `https://www.trbhcares.com/our-focus/${focus}`;
+
+// Breadcrumb Structured Data
+const breadcrumbStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.trbhcares.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Our Programs",
+      "item": "https://www.trbhcares.com/our-focus"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": pageSeo.title.split("|")[0].trim(),
+      "item": canonicalUrl
+    }
+  ]
+};
+
+const structuredDataArray = pageSeo.structuredData
+  ? [pageSeo.structuredData, breadcrumbStructuredData]
+  : [breadcrumbStructuredData];
 ---
 
-<Layout>
+<Layout
+  title={pageSeo.title}
+  description={pageSeo.description}
+  keywords={pageSeo.keywords}
+  ogTitle={pageSeo.ogTitle}
+  ogDescription={pageSeo.ogDescription}
+  ogImage="https://www.trbhcares.com/background/Our_Focus_Banner.jpg"
+  ogUrl={canonicalUrl}
+  twitterTitle={pageSeo.ogTitle}
+  twitterDescription={pageSeo.ogDescription}
+  twitterImage="https://www.trbhcares.com/background/Our_Focus_Banner.jpg"
+  canonicalUrl={canonicalUrl}
+  structuredData={structuredDataArray}
+>
   <FocusPage title={focus} pathname={`/our-focus/${focus}`} />
 </Layout>

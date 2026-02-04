@@ -1,8 +1,103 @@
 ---
 import PatientVisitorPage from "../../components/patient-visitor-page/patient-visitor-page";
 import Layout from "../../layouts/Layout.astro";
+
+const pageTitle = "Patient & Visitor Guide | What to Expect at Three Rivers Behavioral Health";
+const pageDescription = "Comprehensive guide for patients and families: preparing for admission, what to expect during your stay, discharge planning, and post-care support at Three Rivers Behavioral Health in West Mifflin, PA.";
+const pageKeywords = "psychiatric hospital patient guide, what to bring to mental health hospital, preparing for psychiatric admission, what to expect mental health hospitalization, psychiatric hospital visiting hours, family guide psychiatric hospital, patient rights mental health facility, what happens during psychiatric stay, discharge planning mental health, psychiatric hospital rules regulations, visiting psychiatric patient, what can I bring to psychiatric hospital, mental health hospital checklist, preparing elderly parent psychiatric admission, first time psychiatric hospitalization guide, psychiatric hospital daily schedule, what is psychiatric hospitalization like, mental health hospital for families, caregiver guide psychiatric hospital, psychiatric patient belongings, mental health hospital policies, visiting hours psychiatric facility Pittsburgh, patient guide geriatric psychiatry, family involvement mental health treatment, psychiatric discharge process, follow-up care after hospitalization";
+const canonicalUrl = "https://www.trbhcares.com/patient-visitor-guide";
+
+// Structured Data
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Patient & Visitor Guide",
+  "url": canonicalUrl,
+  "description": pageDescription,
+  "provider": {
+    "@type": "Hospital",
+    "name": "Three Rivers Behavioral Health"
+  },
+  "about": {
+    "@type": "MedicalProcedure",
+    "name": "Psychiatric Hospital Stay"
+  }
+};
+
+// FAQ Structured Data
+const faqStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What should I bring to a psychiatric hospital?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bring comfortable clothing, personal hygiene items, insurance information, and identification. Do not bring valuables, sharp objects, or items with cords. Our staff will provide a complete checklist during the admission process."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are visiting hours at Three Rivers Behavioral Health?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We have designated visiting hours to support family involvement while maintaining therapeutic programming. Please contact us at 1-888-391-0229 for current visiting hours and policies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a typical psychiatric hospital stay last?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The length of stay varies based on individual needs and treatment progress. Our multidisciplinary team works with patients and families to determine the appropriate level of care and discharge planning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can family members be involved in treatment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, family involvement is an important part of treatment at Three Rivers Behavioral Health. We encourage family participation in treatment planning and discharge preparation when appropriate."
+      }
+    }
+  ]
+};
+
+// Breadcrumb Structured Data
+const breadcrumbStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.trbhcares.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Patient & Visitor Guide",
+      "item": canonicalUrl
+    }
+  ]
+};
 ---
 
-<Layout>
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+  ogTitle="Patient & Visitor Guide | Three Rivers Behavioral Health"
+  ogDescription="Essential information for patients and families: admission preparation, what to expect, visiting hours, discharge planning, and support resources."
+  ogImage="https://www.trbhcares.com/background/Our_Focus_Banner.jpg"
+  ogUrl={canonicalUrl}
+  twitterTitle="Patient & Visitor Guide | Three Rivers Behavioral Health"
+  twitterDescription="Complete guide for patients and families navigating psychiatric hospitalization at Three Rivers Behavioral Health."
+  twitterImage="https://www.trbhcares.com/background/Our_Focus_Banner.jpg"
+  canonicalUrl={canonicalUrl}
+  structuredData={[structuredData, faqStructuredData, breadcrumbStructuredData]}
+>
 	<PatientVisitorPage />
 </Layout>

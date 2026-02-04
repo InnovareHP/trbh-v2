@@ -1,8 +1,56 @@
 ---
 import IntensiveOutpatient from "../../components/inpatient-guide/inpatient";
 import Layout from "../../layouts/Layout.astro";
+
+const pageTitle = "Intensive Outpatient Program (IOP) | Flexible Mental Health Treatment | Three Rivers Behavioral Health";
+const pageDescription = "Intensive Outpatient Program (IOP) at Three Rivers Behavioral Health provides structured mental health treatment while allowing you to maintain daily routines. Flexible psychiatric care in West Mifflin, PA.";
+const pageKeywords = "intensive outpatient program, IOP mental health, outpatient psychiatric treatment, flexible mental health program, IOP Pittsburgh, intensive outpatient therapy, what is IOP program, outpatient mental health treatment adults, IOP for depression, IOP for anxiety, partial hospitalization program, structured outpatient therapy, mental health day program, outpatient psychiatric services, IOP elderly mental health, adult intensive outpatient, outpatient mental health program near me, IOP vs inpatient psychiatric care, when is IOP appropriate, intensive outpatient mental health Pittsburgh, outpatient treatment after hospitalization, step-down psychiatric care, IOP insurance coverage, Medicare intensive outpatient program";
+const canonicalUrl = "https://www.trbhcares.com/inpatient-guide";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "MedicalTherapy",
+  "name": "Intensive Outpatient Program (IOP)",
+  "provider": {
+    "@type": "Hospital",
+    "name": "Three Rivers Behavioral Health"
+  },
+  "description": pageDescription
+};
+
+const breadcrumbStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.trbhcares.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Intensive Outpatient Program",
+      "item": canonicalUrl
+    }
+  ]
+};
 ---
 
-<Layout>
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+  ogTitle="Intensive Outpatient Program (IOP) | Three Rivers Behavioral Health"
+  ogDescription="Structured mental health treatment with the flexibility to maintain your daily life. IOP for adults in West Mifflin, PA."
+  ogImage="https://www.trbhcares.com/background/Our_Focus_Banner.jpg"
+  ogUrl={canonicalUrl}
+  twitterTitle="Intensive Outpatient Mental Health Program | Three Rivers"
+  twitterDescription="Flexible, structured psychiatric treatment through our Intensive Outpatient Program (IOP)."
+  twitterImage="https://www.trbhcares.com/background/Our_Focus_Banner.jpg"
+  canonicalUrl={canonicalUrl}
+  structuredData={[structuredData, breadcrumbStructuredData]}
+>
 	<IntensiveOutpatient />
 </Layout>

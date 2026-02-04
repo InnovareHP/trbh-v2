@@ -1,8 +1,145 @@
 ---
 import About from "../components/about-us/about-us";
 import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "About Three Rivers Behavioral Health | Expert Psychiatric Care Team in West Mifflin, PA";
+const pageDescription = "Learn about Three Rivers Behavioral Health's expert multidisciplinary team providing specialized psychiatric care for adults and seniors in West Mifflin, PA. 24/7 mental health crisis support available.";
+const pageKeywords = "about Three Rivers Behavioral Health, who treats elderly mental health Pittsburgh, geriatric psychiatrist near me, psychiatric hospital staff qualifications, board certified geriatric psychiatrists Pennsylvania, what kind of doctors treat elderly depression, mental health team for seniors, who can help my aging parent with mental illness, psychiatric hospital staff credentials, experienced dementia psychiatrists, mental health professionals for older adults, what to expect from psychiatric hospital, how psychiatric hospitals help seniors, mental health team adults Pittsburgh, family-centered psychiatric care, caregiver support mental health hospital, Medicare accepted psychiatric facility, psychiatric hospital reviews Western PA, trusted mental health hospital Pittsburgh, senior psychiatric care team, adult mental health specialists, neuropsychiatric care providers, 24/7 psychiatric support team, mental health crisis professionals, how psychiatric hospitals work, what happens in psychiatric hospital, mental health hospital environment, safe psychiatric care facility";
+const canonicalUrl = "https://www.trbhcares.com/about-us";
+
+// Organization & About Page Structured Data
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Three Rivers Behavioral Health",
+  "url": canonicalUrl,
+  "description": pageDescription,
+  "mainEntity": {
+    "@type": ["Hospital", "MedicalOrganization"],
+    "name": "Three Rivers Behavioral Health",
+    "alternateName": "TRBH",
+    "url": "https://www.trbhcares.com",
+    "logo": "https://www.trbhcares.com/logo/trbh-logo.png",
+    "description": "Three Rivers Behavioral Health is a specialized psychiatric hospital serving adults and seniors with comprehensive inpatient, residential, and intensive outpatient mental health services in West Mifflin, Pennsylvania.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4043 Irene St",
+      "addressLocality": "West Mifflin",
+      "addressRegion": "PA",
+      "postalCode": "15122",
+      "addressCountry": "US"
+    },
+    "telephone": "+1-888-391-0229",
+    "medicalSpecialty": [
+      "Geriatric Psychiatry",
+      "Adult Psychiatry",
+      "Behavioral Health",
+      "Neuropsychiatric Disorders",
+      "Dementia Care"
+    ],
+    "employee": [
+      {
+        "@type": "OrganizationRole",
+        "roleName": "Board-Certified Geriatric Psychiatrist"
+      },
+      {
+        "@type": "OrganizationRole",
+        "roleName": "Psychologist"
+      },
+      {
+        "@type": "OrganizationRole",
+        "roleName": "Registered Nurse"
+      },
+      {
+        "@type": "OrganizationRole",
+        "roleName": "Social Worker"
+      }
+    ]
+  }
+};
+
+// FAQ Structured Data for AI Search
+const faqStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Three Rivers Behavioral Health?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three Rivers Behavioral Health is a specialized psychiatric hospital in West Mifflin, PA, providing comprehensive mental health services for adults and seniors. We offer inpatient psychiatric care, residential treatment, and intensive outpatient programs with a multidisciplinary team of experts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who does Three Rivers Behavioral Health treat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We specialize in treating adults ages 18 and older, including older adults and seniors with psychiatric conditions such as depression, anxiety, psychosis, schizophrenia, dementia, Alzheimer's, and neuropsychiatric disorders. Our team provides age-appropriate, personalized care."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of mental health professionals work at Three Rivers Behavioral Health?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our expert multidisciplinary team includes Board-Certified Geriatric Psychiatrists, Psychologists, Nurse Practitioners, Registered Nurses, Social Workers, Physical Therapists, Occupational Therapists, Speech Therapists, and Registered Dietitians who work together to provide comprehensive care."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Three Rivers Behavioral Health provide 24/7 crisis support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, our clinical team is available 24 hours a day, 7 days a week to assist with mental health crisis admissions and provide immediate assessment. Call us anytime at 1-888-391-0229 for emergency psychiatric support."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes Three Rivers Behavioral Health different from other mental health facilities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We specialize in geriatric and adult psychiatric care with a comprehensive multidisciplinary team. Our facility is specifically designed to provide a safe, comfortable environment for older adults. We offer individualized treatment plans and 24/7 clinical support for admissions and crisis care."
+      }
+    }
+  ]
+};
+
+// Breadcrumb Structured Data
+const breadcrumbStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.trbhcares.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About Us",
+      "item": "https://www.trbhcares.com/about-us"
+    }
+  ]
+};
 ---
 
-<Layout>
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+  ogTitle="About Three Rivers Behavioral Health | Expert Mental Health Care Team"
+  ogDescription="Meet our expert team of psychiatrists, psychologists, and mental health professionals providing compassionate psychiatric care for adults and seniors in West Mifflin, PA."
+  ogImage="https://www.trbhcares.com/background/care-home-banner.webp"
+  ogUrl={canonicalUrl}
+  twitterTitle="About TRBH | Specialized Psychiatric Hospital for Adults & Seniors"
+  twitterDescription="Discover Three Rivers Behavioral Health's multidisciplinary approach to mental health care with board-certified geriatric psychiatrists and comprehensive support services."
+  twitterImage="https://www.trbhcares.com/background/care-home-banner.webp"
+  canonicalUrl={canonicalUrl}
+  structuredData={[structuredData, faqStructuredData, breadcrumbStructuredData]}
+>
 	<About />
 </Layout>
