@@ -5,12 +5,10 @@ const ReferralProcess = () => {
     <>
       <header className="flex flex-col items-center justify-center mb-8">
         <img
-          src="/background/referral_process_2000x375.jpg"
-          alt="Referral process banner showing pathway to Three Rivers Behavioral Health admission"
-          width={2000}
-          height={375}
-          fetchPriority="high"
-          className="w-full h-[150px] md:h-[350px] object-cover"
+          src="/background/referral_process_2000x375.png"
+          alt="Referral Process Banner"
+          loading="lazy"
+          className="w-full h-[200px] md:h-[550px] object-cover object-top"
         />
         <div className="h-4 w-full bg-gradient-to-r from-cyan-600 via-gray-300 to-cyan-600"></div>
       </header>

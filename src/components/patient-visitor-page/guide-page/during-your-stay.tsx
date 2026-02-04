@@ -6,7 +6,7 @@ const DuringYourStay = () => {
       </h1>
 
       <img
-        src="/image/during-your-stay.webp"
+        src="/image/during-your-stay.jpg"
         alt="Patient and nurse during orientation"
         className="w-full md:w-96 h-auto object-cover md:float-right md:ml-6 mb-4"
       />
@@ -80,18 +80,18 @@ const DuringYourStay = () => {
         up-to-date information.
       </p>
 
-  
-      <h2 className="text-xl font-bold text-black">Visiting Holidays Include:</h2> 
+      <h2 className="text-xl font-bold text-black">
+        Visiting Holidays Include:
+      </h2>
 
-<ul className="list-disc list-inside pl-6 text-black"    >
-  <li className="font-bold" >New Year's Day</li>
-  <li className="font-bold">Memorial Day</li>
-  <li className="font-bold">Independence Day</li>
-  <li className="font-bold">Labor Day</li>
-  <li className="font-bold">Thanksgiving Day</li>
-  <li className="font-bold">Christmas Day</li>
-</ul>
-  
+      <ul className="list-disc list-inside pl-6 text-black">
+        <li className="font-bold">New Year's Day</li>
+        <li className="font-bold">Memorial Day</li>
+        <li className="font-bold">Independence Day</li>
+        <li className="font-bold">Labor Day</li>
+        <li className="font-bold">Thanksgiving Day</li>
+        <li className="font-bold">Christmas Day</li>
+      </ul>
 
       <div className="space-y-6 text-sm leading-relaxed">
         <section>
@@ -209,8 +209,8 @@ const DuringYourStay = () => {
               allowed), and TV shows rated anything except TV-MA.
             </li>
             <li>
-              Three Rivers Behavioral Health will provide the movies available for
-              patient viewing.
+              Three Rivers Behavioral Health will provide the movies available
+              for patient viewing.
             </li>
             <li>
               Patients and their families are not allowed to bring MP3 players,

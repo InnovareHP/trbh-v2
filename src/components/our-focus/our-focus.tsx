@@ -7,11 +7,8 @@ const OurFocus = () => {
       <header className="flex flex-col items-center justify-center mb-8">
         <img
           src="/background/Our_Focus_Banner.jpg"
-          alt="Three Rivers Behavioral Health programs and services"
-          width="1200"
-          height="350"
-          fetchPriority="high"
-          className="w-full h-full md:h-[350px] object-cover"
+          alt="Our Focus Banner"
+          className="w-full h-full md:h-[450px] object-cover"
         />
         <div className="h-4 w-full bg-gradient-to-r from-cyan-600 via-gray-300 to-cyan-600"></div>
       </header>
