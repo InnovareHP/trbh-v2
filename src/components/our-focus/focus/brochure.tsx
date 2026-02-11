@@ -16,7 +16,7 @@ export default function BrochureSection() {
 
       <div className="w-full max-w-3xl mx-auto shadow-lg rounded-lg overflow-hidden">
         <img
-          src="/image/Mission-Behavioral-Health-Brochure_M4049_EMAIL_1.jpg"
+          src="/image/Mission-Behavioral-Health-Brochure_M4049_EMAIL_1.png"
           alt="Three Rivers Behavioral Health Brochure"
           className="w-full h-auto object-cover"
         />
