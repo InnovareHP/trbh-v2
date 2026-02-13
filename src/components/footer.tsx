@@ -101,7 +101,8 @@ const Footer = () => {
 
       {/* Copyright */}
       <h3 className="mt-6 text-center text-neutral-300 text-sm">
-        © 2025 Three Rivers Behavioral Health. All Rights Reserved
+        © {new Date().getFullYear()} Three Rivers Behavioral Health. All Rights
+        Reserved
       </h3>
     </footer>
   );
