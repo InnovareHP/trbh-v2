@@ -64,7 +64,12 @@ export default function AboutUs() {
             <li>Schizophrenia</li>
             <li>Behavior disturbances</li>
             <li>Depression</li>
-            <li>Alzheimer's and other types of dementia</li>
+            <li>
+              A history of mental health diagnosis with secondary diagnoses
+              including dementia, Alzheimer’s disease, and mental disorders
+              resulting from brain injury, stroke, or other neuropsychiatric
+              conditions.
+            </li>
             <li>
               Mental disorders related to brain injury, stroke or other
               neuropsychiatric disorders

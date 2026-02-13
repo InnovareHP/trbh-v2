@@ -56,9 +56,10 @@ const OurFocus = () => {
                 <li>Behavior disturbances</li>
                 <li>Depression</li>
                 <li>
-                  Secondary diagnoses including Alzheimer's disease, dementia,
-                  and mental disorders resulting from brain injury, stroke, or
-                  other neuropsychiatric conditions
+                  A history of mental health diagnosis with secondary diagnoses
+                  including dementia, Alzheimer’s disease, and mental disorders
+                  resulting from brain injury, stroke, or other neuropsychiatric
+                  conditions.
                 </li>
                 <li>
                   Post traumatic Stress Disorder, Acute Stress Disorder, and
