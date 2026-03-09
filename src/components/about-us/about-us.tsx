@@ -87,7 +87,7 @@ export default function AboutUs() {
             needs. The team consists of:
           </p>
           <ul className="list-disc list-inside">
-            <li>Board-Certified Geriatric Psychiatrists</li>
+            <li>Board-Certified Psychiatrists</li>
             <li>Psychologists</li>
             <li>Internal Medicine/Geriatric Physicians</li>
             <li>Nurse Practitioners</li>
