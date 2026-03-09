@@ -93,12 +93,12 @@ export default function AboutUs() {
             <li>Nurse Practitioners</li>
             <li>Registered Nurses</li>
             <li>Social Workers</li>
-            <li>Geriatric Activity Therapists</li>
+            {/* <li>Geriatric Activity Therapists</li> */}
             <li>Registered Dietitians</li>
             <li>Physical Therapists</li>
             <li>Occupational Therapists</li>
-            <li>Speech Therapists</li>
-            <li>Wound/Ostomy Consultant Nurses</li>
+            {/* <li>Speech Therapists</li> */}
+            {/* <li>Wound/Ostomy Consultant Nurses</li> */}
           </ul>
         </section>
 
