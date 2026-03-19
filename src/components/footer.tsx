@@ -37,8 +37,7 @@ const Footer = () => {
         >
           {/* Address */}
           <a
-            href="https://www.google.com/maps/@38.3117107,-86.9643974,17z?hl=en&entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D"
-            target="_blank"
+            href="https://www.google.com/maps/place/Three+Rivers+Behavioral+Health/@40.389874,-79.8779095,17z/data=!3m1!4b1!4m6!3m5!1s0x8834ef507fa8d655:0x63ad62d7af0e6219!8m2!3d40.389874!4d-79.8779095!16s%2Fg%2F11x0_20gs3?hl=en&entry=ttu&g_ep=EgoyMDI1MDMwMy4wIKXMDSoASAFQAw%3D%3D"
             className="space-y-4"
           >
             <h2 className="font-bold">THREE RIVERS BEHAVIORAL HEALTH</h2>
