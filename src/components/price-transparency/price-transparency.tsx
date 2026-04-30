@@ -33,7 +33,7 @@ const PriceTransparency = () => {
             <ul className="list-disc list-inside space-y-2">
               <li>
                 <a
-                  href="/Three-Behavioral-Health-West Mifflin-2025-Shoppable-Services-Pricing.xlsx"
+                  href="/three-rivers-behavioral-health-west-mifflin-2025-standard-pricing.xlsx"
                   className="font-semibold text-cyan-700 hover:underline"
                   aria-label="Download standard pricing document for Three Rivers Behavioral Health"
                 >
@@ -42,7 +42,7 @@ const PriceTransparency = () => {
               </li>
               <li>
                 <a
-                  href="/Three-Behavioral-Health-West Mifflin-2025-Standard-Pricing.xlsx"
+                  href="/three-rivers-behavioral-health-west-mifflin-2025-shoppable-services-pricing.xlsx"
                   className="font-semibold text-cyan-700 hover:underline"
                   aria-label="Download shoppable services pricing document for Three Rivers Behavioral Health"
                 >

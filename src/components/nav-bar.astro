@@ -1,0 +1,263 @@
+---
+const navLinks = [
+  { name: "Our Programs", href: "/our-focus" },
+  {
+    name: "Inpatient Program",
+    href: "/our-focus/psychiatric-inpatient-treatment-program",
+    subLinks: [
+      {
+        name: "Conditions & Therapies",
+        href: "/our-focus/conditions-and-therapy-programs",
+      },
+      { name: "Nutrition", href: "/our-focus/nutrition-program" },
+      {
+        name: "Preparing for Your Stay",
+        href: "/patient-visitor-guide/preparing-for-your-stay",
+      },
+      {
+        name: "During Your Stay",
+        href: "/patient-visitor-guide/during-your-stay",
+      },
+      {
+        name: "Discharge & Follow-up",
+        href: "/patient-visitor-guide/discharge-and-follow-up",
+      },
+      {
+        name: "Getting Help at Home",
+        href: "/patient-visitor-guide/getting-help-at-home",
+      },
+      {
+        name: "Discharge to a Facility",
+        href: "/patient-visitor-guide/discharge-to-a-facility",
+      },
+    ],
+  },
+  {
+    name: "Residential Program",
+    href: "/residential-treatment",
+    subLinks: [
+      {
+        name: "Preparing for Your Stay",
+        href: "/patient-visitor-guide/preparing-for-your-stay",
+      },
+      {
+        name: "During Your Stay",
+        href: "/patient-visitor-guide/during-your-stay",
+      },
+    ],
+  },
+  { name: "Intensive Outpatient", href: "/inpatient-guide" },
+  { name: "Referral Process", href: "/referral-process" },
+  { name: "Location & Contact", href: "/location-contact" },
+];
+
+const slugify = (s: string) => s.replace(/\s+/g, "-").toLowerCase();
+---
+
+<nav class="w-full relative" aria-label="Primary">
+  <div class="bg-cyan-600 hidden md:block">
+    <div class="flex justify-end text-white text-sm font-semibold max-w-7xl mx-auto">
+      <a
+        href="/about-us"
+        class="px-6 py-2 border-l border-cyan-700 hover:bg-cyan-700 transition"
+      >
+        About Us
+      </a>
+    </div>
+  </div>
+
+  <div
+    class="flex flex-wrap md:flex-nowrap items-center justify-between py-6 w-full max-w-7xl mx-auto px-4 bg-white z-50 relative"
+  >
+    <a
+      href="/"
+      class="flex items-center"
+      aria-label="Three Rivers Behavioral Health home"
+    >
+      <img
+        src="/logo/trbh-logo.png"
+        alt="Three Rivers Behavioral Health logo"
+        width="200"
+        height="160"
+        class="h-20 md:h-40 w-auto object-contain"
+      />
+    </a>
+
+    <ul class="hidden md:flex space-x-8 items-center relative">
+      {
+        navLinks.map((link) => (
+          <li class="group relative">
+            <a
+              href={link.href}
+              class="text-blue-900 hover:text-cyan-600 transition text-md font-semibold flex items-center"
+            >
+              {link.name}
+              {link.subLinks && (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="ml-1 w-4 h-4"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.04l3.71-3.81a.75.75 0 111.08 1.04l-4.25 4.36a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              )}
+            </a>
+            {link.subLinks && (
+              <ul class="absolute top-full left-0 mt-2 w-72 bg-white shadow-lg rounded border border-gray-100 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200">
+                {link.subLinks.map((sub) => (
+                  <li>
+                    <a
+                      href={sub.href}
+                      class="block px-4 py-2 text-blue-900 hover:bg-cyan-50 hover:text-cyan-700 text-sm font-medium"
+                    >
+                      {sub.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))
+      }
+    </ul>
+
+    <button
+      type="button"
+      id="trbh-nav-toggle"
+      aria-controls="trbh-mobile-drawer"
+      aria-expanded="false"
+      class="md:hidden text-black focus:outline-none z-50 absolute right-4 top-4"
+    >
+      <span class="sr-only">Open menu</span>
+      <svg
+        id="trbh-nav-icon-open"
+        class="block w-7 h-7"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+      <svg
+        id="trbh-nav-icon-close"
+        class="hidden w-7 h-7"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div
+    id="trbh-mobile-drawer"
+    class="fixed top-0 right-0 z-40 pt-42 w-full h-full bg-neutral-900/95 p-6 overflow-y-auto transform transition-transform duration-300 translate-x-full"
+  >
+    <ul class="flex flex-col space-y-6">
+      {
+        navLinks.map((link) => (
+          <li>
+            <div class="flex justify-between items-center text-white font-semibold">
+              <a href={link.href}>{link.name}</a>
+              {link.subLinks && (
+                <button
+                  type="button"
+                  class="trbh-sub-toggle ml-2 p-1"
+                  aria-expanded="false"
+                  data-target={`trbh-sub-${slugify(link.name)}`}
+                >
+                  <span class="sr-only">Toggle submenu</span>
+                  <svg
+                    class="w-5 h-5 transition-transform"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.04l3.71-3.81a.75.75 0 111.08 1.04l-4.25 4.36a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              )}
+            </div>
+            {link.subLinks && (
+              <ul
+                id={`trbh-sub-${slugify(link.name)}`}
+                class="hidden mt-2 ml-4 space-y-2"
+              >
+                {link.subLinks.map((sub) => (
+                  <li>
+                    <a href={sub.href} class="block text-gray-300 text-sm">
+                      {sub.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))
+      }
+      <li>
+        <a href="/about-us" class="block text-white font-semibold">About Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.getElementById("trbh-nav-toggle");
+  const drawer = document.getElementById("trbh-mobile-drawer");
+  const iconOpen = document.getElementById("trbh-nav-icon-open");
+  const iconClose = document.getElementById("trbh-nav-icon-close");
+
+  if (toggle && drawer && iconOpen && iconClose) {
+    toggle.addEventListener("click", () => {
+      const isOpen = drawer.classList.toggle("translate-x-0");
+      drawer.classList.toggle("translate-x-full", !isOpen);
+      toggle.setAttribute("aria-expanded", String(isOpen));
+      iconOpen.classList.toggle("hidden", isOpen);
+      iconOpen.classList.toggle("block", !isOpen);
+      iconClose.classList.toggle("block", isOpen);
+      iconClose.classList.toggle("hidden", !isOpen);
+    });
+  }
+
+  document
+    .querySelectorAll<HTMLButtonElement>(".trbh-sub-toggle")
+    .forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const id = btn.getAttribute("data-target");
+        if (!id) return;
+        const target = document.getElementById(id);
+        if (!target) return;
+        const isCurrentlyOpen = !target.classList.contains("hidden");
+        target.classList.toggle("hidden", isCurrentlyOpen);
+        btn.setAttribute("aria-expanded", String(!isCurrentlyOpen));
+        const svg = btn.querySelector("svg");
+        if (svg) svg.classList.toggle("rotate-180", !isCurrentlyOpen);
+      });
+    });
+</script>

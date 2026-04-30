@@ -6,7 +6,7 @@ export default function BrochureSection() {
       </h2>
 
       <a
-        href="https://www.trbhcares.com/Three-Rivers-Behavioral-Health-Brochure.pdf"
+        href="/three-rivers-behavioral-health-brochure.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="text-sm text-[#0097b2] hover:underline block mb-8 text-center font-semibold"

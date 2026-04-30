@@ -10,6 +10,7 @@ import tailwindcss from "@tailwindcss/vite";
 // https://astro.build/config
 export default defineConfig({
   site: "https://trbhcares.com",
+  trailingSlash: "never",
   integrations: [react(), sitemap()],
   adapter: netlify(),
 

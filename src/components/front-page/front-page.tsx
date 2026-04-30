@@ -10,18 +10,25 @@ const IntroductionPage = () => {
         </h1>
         <img
           src="/image/ourMission.jpg"
-          alt="Welcome"
+          alt="Three Rivers Behavioral Health psychiatric hospital in West Mifflin, PA"
+          width={2000}
+          height={550}
+          loading="eager"
+          fetchPriority="high"
           className="w-full h-[200px] md:h-[550px] object-cover object-center"
         />
         <div className="h-4 w-full bg-gradient-to-r from-cyan-600 via-gray-300 to-cyan-600"></div>
       </header>
 
-      <section className="bg-[#f3f3f3] w-full">
+      <section className="bg-[#f3f3f3] w-full" aria-labelledby="mission-heading">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div>
             <img
               src="/image/Mission.jpg"
-              alt="Doctor with patient"
+              alt="Three Rivers Behavioral Health psychiatrist meeting with adult patient"
+              width={450}
+              height={400}
+              loading="lazy"
               className="w-[350px] md:w-[450px] h-[250px] md:h-[400px] object-cover "
             />
           </div>
@@ -87,7 +94,7 @@ const IntroductionPage = () => {
             <div className="flex flex-col max-w-xs md:max-w-3xl">
               <ButtonCTA
                 text="WHY THREE RIVERS BEHAVIORAL HEALTH?"
-                href="/our-focus/psychiatric-inpatient-treatment-program/"
+                href="/our-focus/psychiatric-inpatient-treatment-program"
               />
             </div>
           </div>
@@ -125,7 +132,7 @@ const IntroductionPage = () => {
 
             <p className="text-[#0097b2] font-bold underline mb-4">
               <a
-                href="https://www.google.com/maps/place/Three+Rivers+Behavioral+Health/@40.389874,-79.8779095,17z/data=!3m1!4b1!4m6!3m5!1s0x8834ef507fa8d655:0x63ad62d7af0e6219!8m2!3d40.389874!4d-79.8779095!16s%2Fg%2F11x0_20gs3?hl=en&entry=ttu&g_ep=EgoyMDI1MDMwMy4wIKXMDSoASAFQAw%3D%3D"
+                href="https://maps.google.com/?q=4043+Irene+St,+West+Mifflin,+PA+15122"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="View Three Rivers Behavioral Health location on Google Maps"
