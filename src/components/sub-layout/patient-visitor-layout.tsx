@@ -20,7 +20,7 @@ const PatientVisitorLayout = ({
           <img
             src="/background/referral-process.jpg"
             alt="Our Focus Banner"
-            className="w-full h-[150px] md:h-[350px] object-cover"
+            className="w-full h-[200px] md:h-[550px] object-cover object-top"
           />
           <div className="h-4 w-full bg-gradient-to-r from-cyan-600 via-gray-300 to-cyan-600"></div>
         </div>
@@ -34,8 +34,8 @@ const PatientVisitorLayout = ({
         <div className="lg:col-span-2">
           <div className="flex gap-10">
             {children}
-            {pathname !== "/patient & visitor guide/preparing-for-your-stay" &&
-            pathname !== "/patient & visitor guide/during-your-stay" ? (
+            {pathname !== "/patient-visitor-guide/preparing-for-your-stay" &&
+            pathname !== "/patient-visitor-guide/during-your-stay" ? (
               <aside className="space-y-4 hidden md:block">
                 {linksPatientVisitorGuide.map((item, idx) => (
                   <div
