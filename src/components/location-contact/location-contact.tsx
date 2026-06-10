@@ -58,7 +58,8 @@ const LocationContact = () => {
                 </a>
               </p>
               <p>
-                Fax: <span className="text-[#0097b2]">412-706-9202</span>
+                Fax:{" "}
+                <span className="text-[#0097b2] font-bold">412-706-9202</span>
               </p>
             </div>
           </address>
