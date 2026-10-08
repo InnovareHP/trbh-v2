@@ -42,3 +42,10 @@
   [headers.values]
     Cache-Control = "public, max-age=86400"
     Content-Type = "application/pdf"
+
+# Old duplicate of /referral-process that rendered "Page not found."
+[[redirects]]
+  from = "/our-focus/referral-process"
+  to = "/referral-process"
+  status = 301
+  force = true

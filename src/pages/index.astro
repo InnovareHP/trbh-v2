@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro";
 const pageTitle =
   "Three Rivers Behavioral Health | Psychiatric Hospital in West Mifflin, PA";
 const pageDescription =
-  "24/7 psychiatric hospital in West Mifflin near Pittsburgh, PA. Inpatient, residential, and intensive outpatient mental health programs for adults. Medicare accepted. Call 1-888-391-0229.";
+  "Psychiatric hospital in West Mifflin near Pittsburgh, PA: older adult inpatient care, adult residential and intensive outpatient programs. Call 1-888-391-0229.";
 const canonicalUrl = "https://trbhcares.com";
 
 const websiteSchema = {
@@ -13,51 +13,8 @@ const websiteSchema = {
   "@type": "WebSite",
   name: "Three Rivers Behavioral Health",
   url: canonicalUrl,
-  potentialAction: {
-    "@type": "SearchAction",
-    target: `${canonicalUrl}/?q={search_term_string}`,
-    "query-input": "required name=search_term_string",
-  },
 };
 
-const faqStructuredData = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Where can I get psychiatric help near Pittsburgh?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Three Rivers Behavioral Health in West Mifflin, PA (Pittsburgh area) provides 24/7 psychiatric inpatient care, residential mental health services, and intensive outpatient programs for adults.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "When do I need inpatient mental health care?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Inpatient mental health care may be needed if you or a loved one is experiencing severe depression, suicidal thoughts, psychosis, severe anxiety, or inability to care for oneself. Three Rivers Behavioral Health provides 24/7 crisis psychiatric care.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What mental health services does Three Rivers Behavioral Health offer?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Three Rivers Behavioral Health offers psychiatric inpatient treatment, adult residential mental health services, intensive outpatient programs (IOP), older adult psychiatric care, EMDR therapy, DBT therapy, and trauma-informed care.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do I admit a loved one for psychiatric care?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Call our 24/7 admissions line at 1-888-391-0229. Our intake team will assess immediate needs, verify insurance, and coordinate the admission process.",
-      },
-    },
-  ],
-};
 ---
 
 <Layout
@@ -68,7 +25,7 @@ const faqStructuredData = {
   ogDescription="Patient-focused psychiatric care: inpatient hospitalization, residential services, and intensive outpatient programs for adults in West Mifflin, PA."
   twitterTitle="Three Rivers Behavioral Health | Adult Psychiatric Programs"
   twitterDescription="Inpatient, residential, and intensive outpatient psychiatric programs for adults near Pittsburgh, PA."
-  structuredData={[websiteSchema, faqStructuredData]}
+  structuredData={[websiteSchema]}
 >
   <Welcome />
 </Layout>

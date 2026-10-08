@@ -30,7 +30,7 @@ const LocationContact = () => {
               <p>
                 Main Hospital Toll Free Phone:{" "}
                 <a
-                  href="tel:1-888-391-0229"
+                  href="tel:+18883910229"
                   aria-label="Call Three Rivers Behavioral Health main hospital toll free at 1-888-391-0229"
                   className="text-[#0097b2] hover:underline font-bold"
                 >
@@ -40,7 +40,7 @@ const LocationContact = () => {
               <p>
                 Intake Toll Free Phone:{" "}
                 <a
-                  href="tel:1-888-391-2655"
+                  href="tel:+18883912655"
                   aria-label="Call Three Rivers Behavioral Health intake toll free at 1-888-391-2655"
                   className="text-[#0097b2] hover:underline font-bold"
                 >
@@ -50,7 +50,7 @@ const LocationContact = () => {
               <p>
                 Main Hospital Local Phone:{" "}
                 <a
-                  href="tel:412-706-9201"
+                  href="tel:+14127069201"
                   aria-label="Call Three Rivers Behavioral Health main hospital local at 412-706-9201"
                   className="text-[#0097b2] hover:underline font-bold"
                 >

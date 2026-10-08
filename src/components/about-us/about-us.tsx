@@ -142,7 +142,7 @@ export default function AboutUs() {
             <p>
               If you have questions, please call us at{" "}
               <a
-                href="tel:4127069201"
+                href="tel:+14127069201"
                 className="text-primary font-semibold"
                 aria-label="Call local number 412-706-9201"
               >
@@ -150,7 +150,7 @@ export default function AboutUs() {
               </a>{" "}
               or toll-free at{" "}
               <a
-                href="tel:18883910229"
+                href="tel:+18883910229"
                 className="text-primary font-semibold"
                 aria-label="Call toll-free 1-888-391-0229"
               >

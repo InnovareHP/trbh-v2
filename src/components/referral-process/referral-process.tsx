@@ -51,7 +51,7 @@ const ReferralProcess = () => {
               <strong>
                 Intake Line at{" "}
                 <a
-                  href="tel:1-888-391-2655"
+                  href="tel:+18883912655"
                   aria-label="Call Three Rivers Behavioral Health Intake Line at 1-888-391-2655"
                   className="text-[#0097b2] hover:underline"
                 >

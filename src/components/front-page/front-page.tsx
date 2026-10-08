@@ -148,7 +148,7 @@ const IntroductionPage = () => {
               <p>
                 Main Hospital Toll Free Phone:{" "}
                 <a
-                  href="tel:18883910229"
+                  href="tel:+18883910229"
                   className="text-[#0097b2] font-bold underline"
                   aria-label="Call main hospital toll free at 1-888-391-0229"
                 >
@@ -158,7 +158,7 @@ const IntroductionPage = () => {
               <p>
                 Intake Toll Free Phone:{" "}
                 <a
-                  href="tel:18883912655"
+                  href="tel:+18883912655"
                   className="text-[#0097b2] font-bold underline"
                   aria-label="Call intake department toll free at 1-888-391-2655"
                 >
@@ -168,7 +168,7 @@ const IntroductionPage = () => {
               <p>
                 Main Hospital Local Phone:{" "}
                 <a
-                  href="tel:4127069201"
+                  href="tel:+14127069201"
                   className="text-[#0097b2] font-bold underline"
                   aria-label="Call main hospital local number at 412-706-9201"
                 >
@@ -177,13 +177,7 @@ const IntroductionPage = () => {
               </p>
               <p>
                 Fax:{" "}
-                <a
-                  href="tel:4127069202"
-                  className="text-[#0097b2] font-bold underline"
-                  aria-label="Fax number 412-706-9202"
-                >
-                  412-706-9202
-                </a>
+                <span className="text-[#0097b2] font-bold">412-706-9202</span>
               </p>
             </div>
           </address>

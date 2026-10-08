@@ -64,6 +64,7 @@ const resolvedTwitterImage = new URL(
 const hospitalSchema: StructuredDataNode = {
   "@context": "https://schema.org",
   "@type": "Hospital",
+  "@id": new URL("/#hospital", siteOrigin).href,
   name: SITE_NAME,
   alternateName: "TRBH",
   url: siteOrigin.href.replace(/\/$/, ""),
@@ -71,7 +72,6 @@ const hospitalSchema: StructuredDataNode = {
   image: new URL("/background/care-home-banner.webp", siteOrigin).href,
   telephone: "+1-888-391-0229",
   faxNumber: "+1-412-706-9202",
-  priceRange: "$$",
   address: {
     "@type": "PostalAddress",
     streetAddress: "4043 Irene St",
@@ -105,7 +105,7 @@ const hospitalSchema: StructuredDataNode = {
     { "@type": "AdministrativeArea", name: "Allegheny County" },
     { "@type": "State", name: "Pennsylvania" },
   ],
-  medicalSpecialty: ["Psychiatric", "BehavioralMedicine"],
+  medicalSpecialty: ["Psychiatric"],
   availableService: [
     { "@type": "MedicalTherapy", name: "Psychiatric Inpatient Treatment" },
     {
@@ -113,8 +113,8 @@ const hospitalSchema: StructuredDataNode = {
       name: "Adult Residential Mental Health Services",
     },
     { "@type": "MedicalTherapy", name: "Intensive Outpatient Program (IOP)" },
-    { "@type": "MedicalProcedure", name: "EMDR Therapy" },
-    { "@type": "MedicalProcedure", name: "DBT Therapy" },
+    { "@type": "PsychologicalTreatment", name: "EMDR Therapy" },
+    { "@type": "PsychologicalTreatment", name: "DBT Therapy" },
   ],
   contactPoint: [
     {
@@ -214,15 +214,27 @@ const allStructuredData: StructuredDataNode[] = [
 
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=G-2W3TT2HD37"></script>
+      src="https://www.googletagmanager.com/gtag/js?id=G-QEE63HS9SZ"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-      gtag("config", "G-2W3TT2HD37");
       gtag("config", "G-QEE63HS9SZ");
+
+      // GA4 does not track tel: clicks automatically. Mark phone_call_click as
+      // a key event in both properties to count calls as conversions.
+      document.addEventListener("click", function (e) {
+        var link = e.target.closest && e.target.closest('a[href^="tel:"]');
+        if (!link) return;
+        gtag("event", "phone_call_click", {
+          phone_number: link.getAttribute("href").replace(/\D/g, ""),
+          link_text: link.textContent.trim(),
+          page_path: location.pathname,
+          transport_type: "beacon",
+        });
+      });
     </script>
   </head>
 
