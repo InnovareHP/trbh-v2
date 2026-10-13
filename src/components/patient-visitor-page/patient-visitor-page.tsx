@@ -6,7 +6,7 @@ const PatientVisitorPage = () => {
     <>
       <header className="flex flex-col items-center justify-center mb-8">
         <img
-          src="/background/referral-process.jpg"
+          src="/background/referral-process.webp"
           alt="Patient and visitor guide banner for Three Rivers Behavioral Health"
           width={1200}
           height={350}

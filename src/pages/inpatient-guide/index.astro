@@ -2,8 +2,8 @@
 import IntensiveOutpatient from "../../components/inpatient-guide/inpatient";
 import Layout from "../../layouts/Layout.astro";
 
-const pageTitle = "Intensive Outpatient Program (IOP) | Flexible Mental Health Treatment | Three Rivers Behavioral Health";
-const pageDescription = "Intensive Outpatient Program (IOP) at Three Rivers Behavioral Health provides structured mental health treatment while allowing you to maintain daily routines. Flexible psychiatric care in West Mifflin, PA.";
+const pageTitle = "Intensive Outpatient Program (IOP) | Three Rivers, PA";
+const pageDescription = "Intensive Outpatient Program (IOP): structured mental health treatment while you keep your daily routine. Flexible psychiatric care in West Mifflin, PA.";
 const pageKeywords = "intensive outpatient program, IOP mental health, outpatient psychiatric treatment, flexible mental health program, IOP Pittsburgh, intensive outpatient therapy, what is IOP program, outpatient mental health treatment adults, IOP for depression, IOP for anxiety, partial hospitalization program, structured outpatient therapy, mental health day program, outpatient psychiatric services, IOP elderly mental health, adult intensive outpatient, outpatient mental health program near me, IOP vs inpatient psychiatric care, when is IOP appropriate, intensive outpatient mental health Pittsburgh, outpatient treatment after hospitalization, step-down psychiatric care, IOP insurance coverage, Medicare intensive outpatient program";
 const canonicalUrl = "https://trbhcares.com/inpatient-guide";
 
@@ -11,10 +11,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "MedicalTherapy",
   "name": "Intensive Outpatient Program (IOP)",
-  "provider": {
-    "@type": "Hospital",
-    "name": "Three Rivers Behavioral Health"
-  },
+  "provider": { "@id": "https://trbhcares.com/#hospital" },
   "description": pageDescription
 };
 
@@ -26,7 +23,7 @@ const breadcrumbStructuredData = {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://trbhcares.com/"
+      "item": "https://trbhcares.com"
     },
     {
       "@type": "ListItem",

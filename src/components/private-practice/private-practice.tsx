@@ -11,9 +11,9 @@ const PrivacyNotice = () => {
       />
       <section className="max-w-5xl mx-auto px-6 py-10 text-sm leading-relaxed space-y-4">
         {/* Title */}
-        <h2 className="text-4xl font-bold text-cyan-700 mb-4">
+        <h1 className="text-4xl font-bold text-cyan-700 mb-4">
           Notice of Privacy Practices
-        </h2>
+        </h1>
 
         {/* Intro */}
         <p>

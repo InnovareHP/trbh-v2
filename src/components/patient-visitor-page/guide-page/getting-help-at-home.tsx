@@ -1,9 +1,9 @@
 const GettingHelpAtHome = () => {
   return (
     <div className="min-h-fit space-y-4 text-sm leading-relaxed">
-      <h2 className="text-3xl font-bold text-primary mb-4">
+      <h1 className="text-3xl font-bold text-primary mb-4">
         Getting Help at Home After Inpatient Treatment
-      </h2>
+      </h1>
 
       {/* Floated Image */}
       <img

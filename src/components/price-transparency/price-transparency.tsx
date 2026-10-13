@@ -20,7 +20,7 @@ const PriceTransparency = () => {
             serve. Click on a link below to view our standard pricing and
             shoppable services pricing. You may contact{" "}
             <a
-              href="tel:4127069201"
+              href="tel:+14127069201"
               aria-label="Call Three Rivers Behavioral Health billing at 412-706-9201"
               className="font-semibold text-primary hover:underline"
             >

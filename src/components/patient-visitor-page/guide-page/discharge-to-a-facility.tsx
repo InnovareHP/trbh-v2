@@ -1,13 +1,15 @@
 export default function GettingHelpAtHome() {
   return (
     <div className="min-h-fit max-w-7xl mx-auto">
-      <h2 className="text-3xl font-bold text-primary mb-4">
+      <h1 className="text-3xl font-bold text-primary mb-4">
         Discharge to a Facility
-      </h2>
+      </h1>
 
       {/* Floated Image */}
       <img
-        src="/image/Discharge-to-facility.png"
+        src="/image/Discharge-to-facility.webp"
+        width={896}
+        height={587}
         alt="Nurse helping patient in hospital bed"
         className="w-full md:w-96 h-auto object-cover md:float-right md:ml-6 mb-4 rounded"
       />
