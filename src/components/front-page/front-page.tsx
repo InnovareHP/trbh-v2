@@ -109,7 +109,7 @@ const IntroductionPage = () => {
         <div className="max-w-xs md:max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="">
             <img
-              src="/image/contact-us.jpg"
+              src="/image/contact-us.webp"
               alt="Contact Three Rivers Behavioral Health - Psychiatric hospital located in West Mifflin, Pennsylvania"
               className="w-full md:w-[450px] h-[200px] md:h-[400px] object-cover"
               width="450"

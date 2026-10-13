@@ -2,9 +2,9 @@ export default function ConditionsTherapyPrograms() {
   return (
     <div className="min-h-fit max-w-7xl mx-auto">
       <div className="text-gray-700 text-sm leading-relaxed space-y-4">
-        <h2 className="text-3xl font-bold text-[#0097b2]">
+        <h1 className="text-3xl font-bold text-[#0097b2]">
           Conditions & Therapy Programs
-        </h2>
+        </h1>
 
         <h3 className="text-xl font-semibold text-[#0097b2]">
           Plan of Care Overview

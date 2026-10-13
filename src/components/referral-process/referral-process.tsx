@@ -5,7 +5,9 @@ const ReferralProcess = () => {
     <>
       <header className="flex flex-col items-center justify-center mb-8">
         <img
-          src="/background/referral_process_2000x375.png"
+          src="/background/referral_process_2000x375.webp"
+          width={902}
+          height={594}
           alt="Referral Process Banner"
           loading="lazy"
           className="w-full h-[200px] md:h-[550px] object-cover object-top"

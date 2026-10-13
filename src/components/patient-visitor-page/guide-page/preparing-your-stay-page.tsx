@@ -4,9 +4,13 @@ export default function PreparingForYourStay() {
       <div className="max-w-7xl mx-auto">
         {/* Text Content with Wrapping */}
         <div className="space-y-6 text-sm">
-          <p className="text-3xl font-bold text-[#0097b2] mb-4">
+          <h1 className="text-3xl font-bold text-[#0097b2] mb-4">
+            Preparing for Your Stay
+          </h1>
+
+          <h2 className="text-xl font-semibold text-[#0097b2]">
             Personal Items
-          </p>
+          </h2>
 
           {/* Image floated so text wraps */}
           <img

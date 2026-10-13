@@ -18,7 +18,9 @@ const PatientVisitorLayout = ({
       {title === "preparing-for-your-stay" ? (
         <div className="flex flex-col items-center justify-center mb-8">
           <img
-            src="/background/referral-process.jpg"
+            src="/background/referral-process.webp"
+            width={2000}
+            height={970}
             alt="Our Focus Banner"
             className="w-full h-[200px] md:h-[550px] object-cover object-top"
           />
