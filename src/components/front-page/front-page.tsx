@@ -9,7 +9,7 @@ const IntroductionPage = () => {
           Intensive Outpatient Programs
         </h1>
         <img
-          src="/image/ourMission.jpg"
+          src="/image/ourMission.webp"
           alt="Three Rivers Behavioral Health psychiatric hospital in West Mifflin, PA"
           width={2000}
           height={550}
@@ -24,11 +24,11 @@ const IntroductionPage = () => {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div>
             <img
-              src="/image/Mission.jpg"
+              src="/image/Mission.webp"
               alt="Three Rivers Behavioral Health psychiatrist meeting with adult patient"
               width={450}
               height={400}
-              loading="lazy"
+              loading="eager"
               className="w-[350px] md:w-[450px] h-[250px] md:h-[400px] object-cover "
             />
           </div>
@@ -69,7 +69,7 @@ const IntroductionPage = () => {
         <div className=" max-w-7xl mx-auto flex flex-col md:flex-row-reverse items-center gap-10">
           <div className="">
             <img
-              src="/image/our-vision.jpg"
+              src="/image/our-vision.webp"
               alt="Patient-centered psychiatric care and mental health treatment services at Three Rivers Behavioral Health"
               className="w-[350px] md:w-[450px] h-[250px] md:h-[400px] object-cover"
               width="450"

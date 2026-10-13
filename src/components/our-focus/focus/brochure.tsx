@@ -16,17 +16,17 @@ export default function BrochureSection() {
 
       <div className="w-full max-w-3xl mx-auto shadow-lg rounded-lg overflow-hidden">
         <img
-          src="/image/Mission-Behavioral-Health-Brochure_M4049_EMAIL_1.webp"
-          width={2000}
-          height={1545}
+          src="/image/Mission-Behavioral-Health-Brochure_M4049_EMAIL_1-1536.webp"
+          width={1536}
+          height={1187}
           alt="Three Rivers Behavioral Health Brochure"
           className="w-full h-auto object-cover"
         />
 
         <img
-          src="/image/brochure-2.webp"
-          width={2000}
-          height={1545}
+          src="/image/brochure-2-1536.webp"
+          width={1536}
+          height={1187}
           alt="Three Rivers Behavioral Health Brochure"
           className="w-full h-auto object-cover"
         />
