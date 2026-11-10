@@ -10,6 +10,8 @@ export default function GettingHelpAtHomeVisitation() {
           {/* Right floated image */}
           <img
             src="/image/visitation_400x280.jpg"
+            width={400}
+            height={280}
             alt="Visitors with elderly patient"
             className="float-right ml-6 mb-4 w-90 h-auto object-cover"
           />

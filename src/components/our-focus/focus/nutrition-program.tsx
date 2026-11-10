@@ -10,6 +10,8 @@ export default function NutritionProgram() {
       <div className="w-full mb-6">
         <img
           src="/image/nutrition_1000.jpg"
+          width={1000}
+          height={667}
           alt="Fresh fruits, vegetables, and healthy food"
           className="w-full h-auto object-cover"
         />

@@ -3,9 +3,19 @@ import PrivatePractice from "../components/private-practice/private-practice";
 import Layout from "../layouts/Layout.astro";
 
 const pageTitle = "Notice of Private Practice | Three Rivers Behavioral Health";
-const pageDescription = "Information about private practice providers and their relationship with Three Rivers Behavioral Health.";
+const pageDescription = "Information about private practice providers and their relationship with Three Rivers Behavioral Health, a psychiatric hospital in West Mifflin, PA.";
 const pageKeywords = "private practice notice, provider information, healthcare provider disclosure, private practice providers";
 const canonicalUrl = "https://trbhcares.com/notice-of-private-practice";
+
+// Breadcrumb Structured Data
+const breadcrumbStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://trbhcares.com" },
+    { "@type": "ListItem", "position": 2, "name": "Notice of Private Practice", "item": canonicalUrl }
+  ]
+};
 ---
 
 <Layout
@@ -16,6 +26,7 @@ const canonicalUrl = "https://trbhcares.com/notice-of-private-practice";
   ogDescription="Information about private practice providers at Three Rivers Behavioral Health."
   ogUrl={canonicalUrl}
   canonicalUrl={canonicalUrl}
+  structuredData={breadcrumbStructuredData}
   robots="index, follow"
 >
 	<PrivatePractice />
