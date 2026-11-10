@@ -14,6 +14,8 @@ const DischargeFollowUp = () => {
           {/* Image floated to the right */}
           <img
             src="/image/discharge-follow-up.jpg"
+            width={1024}
+            height={672}
             alt="Nurse with patient during discharge planning"
             className="md:float-right md:ml-4 mb-4 w-full md:w-1/3 rounded"
           />

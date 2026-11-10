@@ -6,6 +6,16 @@ const pageTitle = "Notice of Nondiscrimination | Three Rivers Behavioral Health"
 const pageDescription = "Three Rivers Behavioral Health complies with applicable Federal civil rights laws and does not discriminate on the basis of race, color, national origin, age, disability, or sex.";
 const pageKeywords = "nondiscrimination policy, civil rights, equal access healthcare, patient rights, nondiscrimination notice, healthcare civil rights";
 const canonicalUrl = "https://trbhcares.com/notice-of-nondiscrimination";
+
+// Breadcrumb Structured Data
+const breadcrumbStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://trbhcares.com" },
+    { "@type": "ListItem", "position": 2, "name": "Notice of Nondiscrimination", "item": canonicalUrl }
+  ]
+};
 ---
 
 <Layout
@@ -16,6 +26,7 @@ const canonicalUrl = "https://trbhcares.com/notice-of-nondiscrimination";
   ogDescription="Our commitment to equal access and nondiscrimination in healthcare services."
   ogUrl={canonicalUrl}
   canonicalUrl={canonicalUrl}
+  structuredData={breadcrumbStructuredData}
   robots="index, follow"
 >
 	<NonDiscrimination />

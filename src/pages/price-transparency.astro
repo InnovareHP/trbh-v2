@@ -6,6 +6,16 @@ const pageTitle = "Price Transparency | Three Rivers Behavioral Health";
 const pageDescription = "View standard charges and pricing information for services at Three Rivers Behavioral Health in compliance with federal price transparency requirements.";
 const pageKeywords = "psychiatric hospital pricing, mental health hospital costs, price transparency, healthcare pricing, psychiatric services costs, mental health treatment pricing, hospital standard charges, Three Rivers pricing information";
 const canonicalUrl = "https://trbhcares.com/price-transparency";
+
+// Breadcrumb Structured Data
+const breadcrumbStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://trbhcares.com" },
+    { "@type": "ListItem", "position": 2, "name": "Price Transparency", "item": canonicalUrl }
+  ]
+};
 ---
 
 <Layout
@@ -16,6 +26,7 @@ const canonicalUrl = "https://trbhcares.com/price-transparency";
   ogDescription="Standard charges and pricing information for psychiatric and mental health services."
   ogUrl={canonicalUrl}
   canonicalUrl={canonicalUrl}
+  structuredData={breadcrumbStructuredData}
   robots="index, follow"
 >
 	<Price />

@@ -8,6 +8,8 @@ const GettingHelpAtHome = () => {
       {/* Floated Image */}
       <img
         src="/image/getting_help_at_home_400x280.jpg"
+        width={400}
+        height={280}
         alt="Caregiver helping elderly woman in a grocery store"
         className="w-full md:w-96 h-auto object-cover md:float-right md:ml-6 mb-4 rounded"
       />

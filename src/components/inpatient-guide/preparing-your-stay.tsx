@@ -11,6 +11,8 @@ export default function PreparingForYourStay() {
           {/* Image floated so text wraps */}
           <img
             src="/image/preparing-for-stay.jpg"
+            width={960}
+            height={640}
             alt="Elderly couple smiling"
             className="w-92 h-auto object-cover md:float-right mr-6 mb-4 md:mx-4"
           />

@@ -6,6 +6,16 @@ const pageTitle = "Notice of Privacy Practices | Three Rivers Behavioral Health"
 const pageDescription = "Review our Notice of Privacy Practices and learn how Three Rivers Behavioral Health protects your health information in compliance with HIPAA regulations.";
 const pageKeywords = "HIPAA privacy practices, patient privacy, health information protection, HIPAA compliance, protected health information, patient privacy rights, medical records privacy";
 const canonicalUrl = "https://trbhcares.com/notice-of-privacy-practices-hipaa";
+
+// Breadcrumb Structured Data
+const breadcrumbStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://trbhcares.com" },
+    { "@type": "ListItem", "position": 2, "name": "Notice of Privacy Practices", "item": canonicalUrl }
+  ]
+};
 ---
 
 <Layout
@@ -16,6 +26,7 @@ const canonicalUrl = "https://trbhcares.com/notice-of-privacy-practices-hipaa";
   ogDescription="Our commitment to protecting your health information under HIPAA regulations."
   ogUrl={canonicalUrl}
   canonicalUrl={canonicalUrl}
+  structuredData={breadcrumbStructuredData}
   robots="index, follow"
 >
 	<Hippa />
