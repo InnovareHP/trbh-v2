@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "engines": {
-    "node": ">=24"
+    "node": ">=24.22.3"
   },
   "scripts": {
     "dev": "astro dev",
@@ -18,14 +18,19 @@
     "@tailwindcss/vite": "^4.3.3",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
-    "astro": "^7.4.2",
+    "astro": "^7.4.7",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "tailwindcss": "^4.3.3"
   },
   "overrides": {
     "@netlify/zip-it-and-ship-it": {
-      "toml": "^5.0.1"
+      "toml": "^5.0.1",
+      "@vercel/nft": "^1.11.7",
+      "minimatch": "^11.0.1"
+    },
+    "archiver": {
+      "readdir-glob": "^4.0.0"
     }
   }
 }
