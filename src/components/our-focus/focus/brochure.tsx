@@ -16,7 +16,7 @@ export default function BrochureSection() {
 
       <div className="w-full max-w-3xl mx-auto shadow-lg rounded-lg overflow-hidden">
         <img
-          src="/image/Mission-Behavioral-Health-Brochure_M4049_EMAIL_1-1536.webp"
+          src="/image/brochure-2026-page-1-1536.webp"
           width={1536}
           height={1187}
           alt="Three Rivers Behavioral Health Brochure"
@@ -24,7 +24,7 @@ export default function BrochureSection() {
         />
 
         <img
-          src="/image/brochure-2-1536.webp"
+          src="/image/brochure-2026-page-2-1536.webp"
           width={1536}
           height={1187}
           alt="Three Rivers Behavioral Health Brochure"
