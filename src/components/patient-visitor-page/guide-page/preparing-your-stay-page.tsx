@@ -4,9 +4,13 @@ export default function PreparingForYourStay() {
       <div className="max-w-7xl mx-auto">
         {/* Text Content with Wrapping */}
         <div className="space-y-6 text-sm">
-          <p className="text-3xl font-bold text-[#0097b2] mb-4">
+          <h1 className="text-3xl font-bold text-[#0097b2] mb-4">
             Preparing for Your Stay
-          </p>
+          </h1>
+
+          <h2 className="text-xl font-semibold text-[#0097b2]">
+            Personal Items
+          </h2>
 
           {/* Image floated so text wraps */}
           <img
@@ -14,10 +18,6 @@ export default function PreparingForYourStay() {
             alt="Elderly couple smiling"
             className="w-92 h-auto object-cover md:float-right mr-6 mb-4 md:mx-4"
           />
-
-          <h2 className="text-xl font-semibold text-[#0097b2]">
-            Personal Items
-          </h2>
 
           <p className="text-gray-700">
             You will only need casual clothing during your residential stay.

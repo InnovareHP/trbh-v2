@@ -6,7 +6,7 @@ const DuringYourStay = () => {
       </h1>
 
       <img
-        src="/image/during-your-stay.webp"
+        src="/image/during-your-stay.jpg"
         alt="Patient and nurse during orientation"
         className="w-full md:w-96 h-auto object-cover md:float-right md:ml-6 mb-4 rounded"
       />

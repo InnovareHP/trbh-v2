@@ -3,9 +3,9 @@ const DischargeFollowUp = () => {
     <div className="flex flex-col gap-2 items-start min-h-fit">
       {/* Content */}
       <div className="flex-1 space-y-2 text-sm leading-relaxed">
-        <h2 className="text-3xl font-bold text-primary">
+        <h1 className="text-3xl font-bold text-primary">
           Psychiatric Inpatient Discharge & Follow-up
-        </h2>
+        </h1>
 
         <h3 className="text-xl font-semibold text-primary mt-6">
           Post-Discharge Care

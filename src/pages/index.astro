@@ -1,8 +1,31 @@
 ---
 import Welcome from "../components/front-page/front-page";
 import Layout from "../layouts/Layout.astro";
+
+const pageTitle =
+  "Three Rivers Behavioral Health | Psychiatric Hospital in West Mifflin, PA";
+const pageDescription =
+  "Psychiatric hospital in West Mifflin near Pittsburgh, PA: older adult inpatient care, adult residential and intensive outpatient programs. Call 1-888-391-0229.";
+const canonicalUrl = "https://trbhcares.com";
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Three Rivers Behavioral Health",
+  url: canonicalUrl,
+};
+
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonicalUrl={canonicalUrl}
+  ogTitle="Three Rivers Behavioral Health | Healing Minds & Changing Lives"
+  ogDescription="Patient-focused psychiatric care: inpatient hospitalization, residential services, and intensive outpatient programs for adults in West Mifflin, PA."
+  twitterTitle="Three Rivers Behavioral Health | Adult Psychiatric Programs"
+  twitterDescription="Inpatient, residential, and intensive outpatient psychiatric programs for adults near Pittsburgh, PA."
+  structuredData={[websiteSchema]}
+>
+  <Welcome />
 </Layout>

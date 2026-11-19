@@ -2,9 +2,9 @@ export default function GettingHelpAtHomeVisitation() {
   return (
     <div className="min-h-fit max-w-7xl mx-auto space-y-4">
       <div className="space-y-4 text-sm">
-        <h2 className="text-3xl font-bold text-[#0097b2]">
-          Getting Help at Home
-        </h2>
+        <h1 className="text-3xl font-bold text-[#0097b2]">
+          Visitation
+        </h1>
 
         <div className="relative space-y-4">
           {/* Right floated image */}

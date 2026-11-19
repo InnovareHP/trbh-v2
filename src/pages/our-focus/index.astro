@@ -1,8 +1,103 @@
 ---
 import Focus from "../../components/our-focus/our-focus";
 import Layout from "../../layouts/Layout.astro";
+
+const pageTitle = "Psychiatric Treatment Programs | Three Rivers, West Mifflin PA";
+const pageDescription = "Inpatient psychiatric care, residential services, outpatient programs (IOP) and specialized therapy for adults and seniors in West Mifflin, PA, near Pittsburgh.";
+const pageKeywords = "what mental health programs are available for seniors, inpatient psychiatric care for elderly parents, residential treatment for adult with schizophrenia, outpatient mental health programs Pittsburgh, what level of care does my loved one need, mental health programs for elderly with dementia, PTSD treatment programs for adults, depression treatment programs seniors Pennsylvania, anxiety programs for older adults, what is intensive outpatient mental health, do I need inpatient or outpatient psychiatric care, mental health programs that accept Medicare, psychiatric programs for elderly veterans, dementia behavioral programs, therapy programs for adult mental illness, residential mental health for adults 18+, geriatric psychiatric programs Allegheny County, trauma therapy for adults Pittsburgh, DBT programs for adults Pennsylvania, EMDR therapy elderly PTSD, mental health day programs seniors, psychiatric rehabilitation programs, crisis stabilization programs adults, short-term psychiatric programs, long-term mental health care seniors, mental health programs family involvement, what programs help with Alzheimer's aggression, adult psychiatric programs Western PA";
+const canonicalUrl = "https://trbhcares.com/our-focus";
+
+// Service & Medical Business Structured Data
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Three Rivers Behavioral Health Treatment Programs",
+  "url": canonicalUrl,
+  "description": pageDescription,
+  "provider": { "@id": "https://trbhcares.com/#hospital" },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Mental Health Treatment Programs",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "MedicalTherapy",
+          "name": "Psychiatric Inpatient Treatment Program",
+          "description": "24/7 comprehensive inpatient psychiatric care for adults and seniors experiencing acute mental health crises"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "MedicalTherapy",
+          "name": "Residential Mental Health Services",
+          "description": "Long-term residential treatment for adults with primary psychiatric diagnoses"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "MedicalTherapy",
+          "name": "Intensive Outpatient Program (IOP)",
+          "description": "Flexible outpatient psychiatric treatment for adults needing structured support"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "EMDR Therapy",
+          "description": "Eye Movement Desensitization and Reprocessing therapy for trauma and PTSD treatment"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "DBT Therapy",
+          "description": "Dialectical Behavior Therapy for emotional regulation and mental health support"
+        }
+      }
+    ]
+  }
+};
+
+
+// Breadcrumb Structured Data
+const breadcrumbStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://trbhcares.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Our Programs",
+      "item": canonicalUrl
+    }
+  ]
+};
 ---
 
-<Layout>
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+  ogTitle="Our Programs & Services | Three Rivers Behavioral Health"
+  ogDescription="Comprehensive psychiatric treatment programs for adults and seniors: inpatient care, residential services, intensive outpatient programs, and specialized therapy."
+  ogImage="https://trbhcares.com/background/Our_Focus_Banner.jpg"
+  ogUrl={canonicalUrl}
+  twitterTitle="Mental Health Treatment Programs | Three Rivers Behavioral Health"
+  twitterDescription="Explore our psychiatric inpatient, residential, and outpatient programs plus specialized therapies like EMDR and DBT for adults and seniors."
+  twitterImage="https://trbhcares.com/background/Our_Focus_Banner.jpg"
+  canonicalUrl={canonicalUrl}
+  structuredData={[structuredData, breadcrumbStructuredData]}
+>
 	<Focus />
 </Layout>

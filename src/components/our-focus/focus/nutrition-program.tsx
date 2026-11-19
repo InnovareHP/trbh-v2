@@ -2,9 +2,9 @@ export default function NutritionProgram() {
   return (
     <div className="min-h-fit">
       {/* Title */}
-      <h2 className="text-3xl font-bold text-[#0097b2] mb-6">
+      <h1 className="text-3xl font-bold text-[#0097b2] mb-6">
         Nutrition Program
-      </h2>
+      </h1>
 
       {/* Image */}
       <div className="w-full mb-6">

@@ -1,9 +1,14 @@
 export default function WhyThreeRivers() {
   return (
     <div className="min-h-fit">
+      <h1 className="text-3xl font-bold text-[#0097b2] mb-6">
+        Psychiatric Inpatient Treatment Program
+      </h1>
       <div className="text-gray-700 text-sm leading-relaxed space-y-4">
         <img
-          src="/image/WhyMBH_400x280.jpg"
+          src="/image/WhyMBH_400x280.webp"
+          width={842}
+          height={589}
           alt="Nurse helping elderly patient"
           className="float-right ml-6 mb-4 w-full md:w-80 h-auto object-cover"
         />
