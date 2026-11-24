@@ -43,8 +43,8 @@ const IntroductionPage = () => {
             <p className="text-gray-700 leading-relaxed mb-6 text-sm md:text-lg">
               Three Rivers Behavioral Health Hospital is a dedicated, and
               trusted psychiatric facility. Three Rivers brings you the
-              comprehensive services that include Inpatient Older Adult
-              Psychiatric Hospitalization, Adult Residential Mental Health
+              comprehensive services that include Inpatient Adult and Older
+              Adult Psychiatric Hospitalization, Adult Residential Mental Health
               Services and Intensive Outpatient Programming. We strive to
               provide short term care and treatment to Adult patients with
               psychiatric diagnoses. Providing our patients with compassionate
